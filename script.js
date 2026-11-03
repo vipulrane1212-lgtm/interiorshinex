@@ -59,6 +59,7 @@ const experienceData = {
     heroTitle: "Built around<br /><i>the way you live.</i>",
     heroDescription: "Thoughtful homes, made tactile. From the first line on paper to the last light switched on, we make every detail feel inevitable.",
     heroImage: image("photo-1600607688969-a5bfcd646154"),
+    heroVideo: "assets/hero-residential.mp4",
     introTitle: "Good spaces do<br />more than <i>look good.</i>",
     introCopy: "They hold the morning rush, the quiet pause, the people who gather, and the years that follow. We bring design and execution into one considered conversation.",
     servicesNote: "A full-spectrum residential studio for homes with a point of view.",
@@ -132,6 +133,7 @@ const experienceData = {
     heroTitle: "Built for<br /><i>the way business moves.</i>",
     heroDescription: "From bare shell to handover, ShineX brings design, civil execution and every critical service layer into one coordinated build.",
     heroImage: image("photo-1497366216548-37526070297c"),
+    heroVideo: "assets/hero-commercial.mp4",
     introTitle: "The best workspaces<br />make work <i>flow.</i>",
     introCopy: "We create commercial environments that carry a brand, support a team and survive real use. Strategy, build and technical delivery — held under one roof.",
     servicesNote: "A single execution partner for commercial fit-outs, civil contracting and the systems behind them.",
@@ -265,7 +267,16 @@ function renderExperience(world) {
   $("#headerWorld").textContent = data.header;
   $("#heroTitle").innerHTML = data.heroTitle;
   $("#heroDescription").textContent = data.heroDescription;
-  $("#heroImage").style.backgroundImage = `url("${data.heroImage}")`;
+  const heroVideo = $("#heroVideo");
+  if (heroVideo) {
+    heroVideo.poster = data.heroImage;
+    if (heroVideo.getAttribute("data-src") !== data.heroVideo) {
+      heroVideo.setAttribute("data-src", data.heroVideo);
+      heroVideo.src = data.heroVideo;
+      heroVideo.load();
+    }
+    heroVideo.play().catch(() => {});
+  }
   $("#introTitle").innerHTML = data.introTitle;
   $("#introCopy").textContent = data.introCopy;
   $("#servicesNote").textContent = data.servicesNote;
@@ -490,7 +501,7 @@ function initMotion() {
   if (window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
   gsap.killTweensOf(".hero-image, .hero-content, .section-index, .intro-layout, .service-card, .process-item, .catalog-card");
   if (window.ScrollTrigger) ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-  const heroImage = $("#heroImage");
+  const heroImage = $("#heroVideo");
   gsap.fromTo(heroImage, { scale: 1.14 }, { scale: 1.04, duration: 1.8, ease: "power3.out" });
   gsap.fromTo(".hero-content > *", { y: 35, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .9, ease: "power3.out", stagger: .1, delay: .2 });
   if (window.ScrollTrigger) {
