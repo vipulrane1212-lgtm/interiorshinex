@@ -320,9 +320,9 @@ function renderReviews() {
   $("#googleSource").href = googleProfile.url;
   $(".google-score strong").textContent = googleProfile.rating;
   $(".google-score small").textContent = googleProfile.count;
-  const reviewMarkup = (review, featured = false) => `<article class="review-card${featured ? " review-card--featured" : ""}"><div class="review-card-main"><div class="review-card-top"><span class="review-google"><img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="Google" /><b>Verified review</b></span><span class="review-card-rating">★★★★★</span></div><p>“${review.text}”</p>${featured ? "" : `<div class="review-card-footer"><div class="review-author"><span class="review-author-avatar">${review.initials || "VC"}</span><span><strong>${review.author}</strong><small>${review.detail}</small></span></div><span class="review-date">${review.date}</span></div>`}</div>${featured ? `<div class="review-card-side"><div class="review-author"><span class="review-author-avatar">${review.initials || "VC"}</span><span><strong>${review.author}</strong><small>${review.detail}</small></span></div><span class="review-date">${review.date}</span><a href="${googleProfile.url}" target="_blank" rel="noreferrer">Read on Google ↗</a></div>` : ""}</article>`;
-  $("#reviewFeature").innerHTML = reviewMarkup(reviewHighlights[0], true);
-  const markup = reviewHighlights.slice(1).map(review => reviewMarkup(review)).join("");
+  const reviewMarkup = (review) => `<article class="review-card"><div class="review-card-main"><div class="review-card-top"><span class="review-google"><img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="Google" /><b>Verified review</b></span><span class="review-card-rating">★★★★★</span></div><p>“${review.text}”</p><div class="review-card-footer"><div class="review-author"><span class="review-author-avatar">${review.initials || "VC"}</span><span><strong>${review.author}</strong><small>${review.detail}</small></span></div><span class="review-date">${review.date}</span></div></div></article>`;
+  $("#reviewFeature").innerHTML = "";
+  const markup = reviewHighlights.map(review => reviewMarkup(review)).join("");
   $("#reviewTrack").innerHTML = `<div class="marquee-group">${markup}</div><div class="marquee-group" aria-hidden="true">${markup}</div>`;
 }
 
