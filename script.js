@@ -56,10 +56,8 @@ const experienceData = {
   residential: {
     name: "Residential",
     header: "RESIDENTIAL / 01",
-    eyebrow: "Residential interiors",
     heroTitle: "Built around<br /><i>the way you live.</i>",
     heroDescription: "Thoughtful homes, made tactile. From the first line on paper to the last light switched on, we make every detail feel inevitable.",
-    heroMeta: "Homes / Turnkey / Detail",
     heroImage: image("photo-1600607688969-a5bfcd646154"),
     introTitle: "Good spaces do<br />more than <i>look good.</i>",
     introCopy: "They hold the morning rush, the quiet pause, the people who gather, and the years that follow. We bring design and execution into one considered conversation.",
@@ -131,10 +129,8 @@ const experienceData = {
   commercial: {
     name: "Commercial & Civil",
     header: "COMMERCIAL + CIVIL / 02",
-    eyebrow: "Commercial & civil works",
     heroTitle: "Built for<br /><i>the way business moves.</i>",
     heroDescription: "From bare shell to handover, ShineX brings design, civil execution and every critical service layer into one coordinated build.",
-    heroMeta: "Offices / Fit-outs / Infrastructure",
     heroImage: image("photo-1497366216548-37526070297c"),
     introTitle: "The best workspaces<br />make work <i>flow.</i>",
     introCopy: "We create commercial environments that carry a brand, support a team and survive real use. Strategy, build and technical delivery — held under one roof.",
@@ -267,10 +263,8 @@ function renderExperience(world) {
   activeWorld = world;
   const data = experienceData[world];
   $("#headerWorld").textContent = data.header;
-  $("#heroEyebrow").textContent = data.eyebrow;
   $("#heroTitle").innerHTML = data.heroTitle;
   $("#heroDescription").textContent = data.heroDescription;
-  $("#heroMeta").textContent = data.heroMeta;
   $("#heroImage").style.backgroundImage = `url("${data.heroImage}")`;
   $("#introTitle").innerHTML = data.introTitle;
   $("#introCopy").textContent = data.introCopy;
