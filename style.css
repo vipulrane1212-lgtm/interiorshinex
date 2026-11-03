@@ -73,10 +73,10 @@ h1 i, h2 i, h3 i, .world-option strong i { font-family: Georgia, serif; font-wei
 .site-header { position: fixed; top: 0; left: 0; z-index: 40; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 25px 4vw; mix-blend-mode: difference; color: white; }
 .header-world { display: flex; align-items: center; gap: 9px; font-size: 9px; }
 .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-.header-actions { display: flex; align-items: center; gap: 27px; }
-.text-button { padding: 10px 14px; color: var(--ink); background: var(--white); border: 1px solid rgba(255,255,255,.6); border-radius: 30px; font: 10px var(--mono); letter-spacing: .05em; text-transform: uppercase; }
+.header-actions { position: fixed; top: 25px; right: 4vw; z-index: 41; display: flex; align-items: center; gap: 27px; mix-blend-mode: normal; }.site-header .brand { flex: 1 1 0; }.header-spacer { flex: 1 1 0; }
+.text-button { padding: 10px 14px; color: var(--ink); background: var(--white); border: 1px solid rgba(0,0,0,.12); border-radius: 30px; font: 10px var(--mono); letter-spacing: .05em; text-transform: uppercase; mix-blend-mode: normal; box-shadow: 0 6px 20px rgba(0,0,0,.25); }
 .text-button span { margin-left: 7px; font-size: 15px; }
-.menu-button { display: flex; align-items: center; gap: 7px; padding: 10px 14px; color: var(--ink); background: var(--white); border: 1px solid rgba(255,255,255,.6); border-radius: 30px; font: 10px var(--mono); text-transform: uppercase; }
+.menu-button { display: flex; align-items: center; gap: 7px; padding: 10px 14px; color: var(--ink); background: var(--white); border: 1px solid rgba(0,0,0,.12); border-radius: 30px; font: 10px var(--mono); text-transform: uppercase; mix-blend-mode: normal; box-shadow: 0 6px 20px rgba(0,0,0,.25); }
 .menu-button span { display: block; width: 18px; height: 1px; background: currentColor; transition: transform .3s; }
 .menu-button span + span { margin-left: -25px; transform: translateY(5px); }
 .menu-button:hover span:first-child { transform: translateY(-3px); }
@@ -219,7 +219,7 @@ h1 i, h2 i, h3 i, .world-option strong i { font-family: Georgia, serif; font-wei
 @media (max-width: 800px) {
   .picker-header .mono-label, .header-world { display: none; }
   .site-header .brand-copy em { display: none; }
-  .text-button { display: inline-block; padding: 8px 11px; font-size: 9px; }
+  .text-button { display: inline-block; padding: 8px 11px; font-size: 9px; }.header-actions { top: 20px; right: 5vw; gap: 12px; }
   .menu-button { padding: 8px 11px; font-size: 9px; }
   .review-card { width: 82vw; height: 360px; min-height: 0; }
   .blog-marquee { overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; scrollbar-width: none; }
