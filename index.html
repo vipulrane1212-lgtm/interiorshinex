@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080808" />
+  <meta id="metaDescription" name="description" content="ShineX Infra Solutions — considered interiors, civil execution and commercial fit-outs." />
+  <title>ShineX — Built around your world</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <div class="world-picker" id="worldPicker" aria-label="Choose an experience">
+    <div class="picker-noise"></div>
+    <header class="picker-header">
+      <a class="brand brand--light" href="#" aria-label="ShineX home">
+        <span class="brand-mark">SX</span>
+        <span class="brand-copy">ShineX <em>Infra Solutions</em></span>
+      </a>
+      <span class="mono-label">EST. 2011 / INDIA</span>
+    </header>
+    <div class="picker-intro">
+      <p class="eyebrow">Choose your world <span class="eyebrow-line"></span></p>
+      <h1>Spaces that<br /><i>stay with you.</i></h1>
+      <p class="picker-subtitle">One execution partner. Two ways to begin.</p>
+    </div>
+    <div class="world-options">
+      <button class="world-option world-option--residential" data-world="residential" type="button">
+        <span class="option-backdrop" aria-hidden="true"></span>
+        <span class="option-number">01</span>
+        <span class="option-content">
+          <span class="option-kicker">For the spaces you call home</span>
+          <strong>Residential<br /><i>interiors</i></strong>
+          <span class="option-enter">Enter world <span>↗</span></span>
+        </span>
+      </button>
+      <button class="world-option world-option--commercial" data-world="commercial" type="button">
+        <span class="option-backdrop" aria-hidden="true"></span>
+        <span class="option-number">02</span>
+        <span class="option-content">
+          <span class="option-kicker">For the places that move business</span>
+          <strong>Commercial &amp;<br /><i>civil works</i></strong>
+          <span class="option-enter">Enter world <span>↗</span></span>
+        </span>
+      </button>
+    </div>
+    <footer class="picker-footer">
+      <span>Design / Build / Deliver</span>
+      <span>Scroll to choose <b>↓</b></span>
+      <span>Backed by Sneha Enterprises Class-1 execution</span>
+    </footer>
+  </div>
+
+  <div class="site-shell" id="siteShell" aria-hidden="true">
+    <header class="site-header" id="siteHeader">
+      <a class="brand" href="#top" aria-label="ShineX top">
+        <span class="brand-mark">SX</span>
+        <span class="brand-copy">ShineX <em>Infra Solutions</em></span>
+      </a>
+      <div class="header-world"><span class="status-dot"></span><span id="headerWorld">RESIDENTIAL / 01</span></div>
+      <div class="header-actions">
+        <button class="text-button" id="switchWorld" type="button">Switch world <span>↗</span></button>
+        <button class="menu-button" id="menuOpen" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><b>Menu</b></button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="hero">
+        <div class="hero-image" id="heroImage"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+          <p class="eyebrow"><span id="heroEyebrow">Residential interiors</span><span class="eyebrow-line"></span><span>01 / 02</span></p>
+          <h2 id="heroTitle">Built around<br /><i>the way you live.</i></h2>
+          <p class="hero-description" id="heroDescription">Thoughtful homes, made tactile. From the first line on paper to the last light switched on, we make every detail feel inevitable.</p>
+          <a class="circle-link magnetic" href="#services"><span>Explore<br />the work</span><b>↓</b></a>
+        </div>
+        <div class="hero-meta"><span id="heroMeta">Homes / Turnkey / Detail</span><span>Scroll to discover <b>↓</b></span></div>
+        <div class="hero-vertical">SHINEX / 2026</div>
+      </section>
+
+      <section class="intro section-pad" id="intro">
+        <div class="section-index mono-label">01 — THE POINT OF VIEW</div>
+        <div class="intro-layout">
+          <h3 id="introTitle">Good spaces do<br />more than <i>look good.</i></h3>
+          <div class="intro-copy">
+            <p id="introCopy">They hold the morning rush, the quiet pause, the people who gather, and the years that follow. We bring design and execution into one considered conversation.</p>
+            <a class="underlined-link" href="#process">See how we work <span>↘</span></a>
+          </div>
+        </div>
+        <div class="manifesto"><span>BUILT WITH INTENT</span><span>BUILT TO LAST</span><span>BUILT BY SHINEX</span></div>
+      </section>
+
+      <section class="services-section" id="services">
+        <div class="services-stage">
+          <div class="services-head">
+            <div>
+              <p class="eyebrow"><span>02 / What we do</span><span class="eyebrow-line"></span></p>
+              <h3>One brief.<br /><i>Every layer.</i></h3>
+            </div>
+            <p class="services-note" id="servicesNote">A full-spectrum residential studio for homes with a point of view.</p>
+          </div>
+          <div class="services-viewport">
+            <div class="services-track" id="servicesTrack"></div>
+          </div>
+          <div class="services-progress"><span class="progress-current">01</span><span class="progress-rule"><i id="progressBar"></i></span><span class="progress-total" id="progressTotal">05</span><span class="progress-label">Drag / scroll to explore</span></div>
+      </div>
+    </section>
+
+      <section class="service-detail section-pad" id="serviceDetail" aria-hidden="true">
+        <div class="service-detail-top">
+          <div>
+            <p class="eyebrow"><span>Selected service / Detail view</span><span class="eyebrow-line"></span></p>
+            <h3 id="serviceDetailTitle">Choose a service<br /><i>to see the layers.</i></h3>
+          </div>
+          <button class="detail-close" id="serviceDetailClose" type="button">Close detail <span>×</span></button>
+        </div>
+        <p class="service-detail-intro" id="serviceDetailIntro">Every line item has its own visual reference, so the scope stays as tangible as the final space.</p>
+        <div class="service-detail-grid" id="serviceDetailGrid"></div>
+      </section>
+
+      <section class="split-story section-pad" id="beforeAfter">
+        <div class="section-index mono-label">03 — THE TRANSFORMATION</div>
+        <div class="story-heading">
+          <h3>Before / <i>after.</i></h3>
+          <p>Every project starts with what exists. We find the potential hiding in plain sight.</p>
+        </div>
+        <div class="comparison" data-comparison>
+          <div class="comparison-after" id="comparisonAfter"></div>
+          <div class="comparison-before" id="comparisonBefore"></div>
+          <div class="comparison-divider"><span>Drag</span></div>
+          <input class="comparison-range" type="range" min="5" max="95" value="54" aria-label="Compare before and after" />
+          <div class="comparison-label comparison-label--before">Before</div>
+          <div class="comparison-label comparison-label--after">After</div>
+        </div>
+        <div class="comparison-caption"><span id="comparisonName">A home with a new rhythm</span><span>← Drag the line →</span></div>
+      </section>
+
+      <section class="process-section section-pad" id="process">
+        <div class="section-index mono-label">04 — THE PROCESS</div>
+        <div class="process-header"><h3>Clarity at<br /><i>every stage.</i></h3><p>We keep the complex parts moving quietly in the background, so you can stay close to what matters.</p></div>
+        <div class="process-list" id="processList"></div>
+      </section>
+
+      <section class="catalog-section section-pad" id="catalog">
+        <div class="catalog-top"><div class="section-index mono-label">05 — MATERIAL / CATALOG</div><span class="catalog-code">SX / FIELD NOTES / <span id="catalogYear">26</span></span></div>
+        <div class="catalog-heading"><h3>A tactile<br /><i>point of view.</i></h3><p id="catalogCopy">Stone, timber, light and lived-in softness — a quiet material language, tailored to the way your home should feel.</p></div>
+        <div class="catalog-grid" id="catalogGrid"></div>
+      </section>
+
+      <section class="reviews-section section-pad" id="reviews">
+        <div class="reviews-top"><div class="section-index mono-label">06 — GOOGLE / CLIENT FEEDBACK</div><a class="google-source" id="googleSource" href="https://share.google/jEJDBfo2fof0dsW59" target="_blank" rel="noreferrer"><img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="Google" /><i></i><span>View profile</span><b>↗</b></a></div>
+        <div class="reviews-heading"><h3>What clients<br /><i>remember.</i></h3><div class="google-score"><strong>4.9</strong><span class="google-stars">★★★★★</span><small>103+ public profile reviews</small></div></div>
+        <div class="review-feature" id="reviewFeature"></div>
+        <div class="review-marquee" aria-label="Google review highlights"><div class="review-track" id="reviewTrack"></div></div>
+      </section>
+
+      <section class="faq-section section-pad" id="faq">
+        <div class="section-index mono-label">07 — QUESTIONS, ANSWERED</div>
+        <div class="faq-layout"><h3>Good to<br /><i>know.</i></h3><div class="faq-list" id="faqList"></div></div>
+      </section>
+
+      <section class="insights-section section-pad" id="insights">
+        <div class="insights-top"><div class="section-index mono-label">08 — FIELD NOTES / INSIGHTS</div><span class="catalog-code">Ideas for the built world</span></div>
+        <div class="insights-heading"><h3>Useful ideas<br /><i>for better spaces.</i></h3><p id="insightsCopy">Thoughtful guidance for planning, designing and delivering spaces that feel right long after handover.</p></div>
+        <div class="blog-marquee" aria-label="ShineX journal articles"><div class="blog-track" id="blogTrack"></div></div>
+      </section>
+
+      <section class="closing-cta" id="contact">
+        <div class="closing-image" id="closingImage"></div><div class="closing-overlay"></div>
+        <div class="closing-content"><p class="eyebrow"><span>09 / Begin here</span><span class="eyebrow-line"></span></p><h3 id="closingTitle">Your space<br />starts <i>now.</i></h3><button class="outline-button magnetic quote-trigger" type="button">Get a free quote <span>↗</span></button></div>
+        <div class="closing-bottom"><span>ShineX Infra Solutions</span><span>hello@shinex.in</span><span>Designing the everyday, better.</span></div>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="brand"><span class="brand-mark">SX</span><span class="brand-copy">ShineX <em>Infra Solutions</em></span></div><p>Operating brands: ShineX Interior &amp; ShineX Infra.<br />Backed by Sneha Enterprises Class-1 execution licensure.</p><span>© 2026 ShineX</span></footer>
+  </div>
+
+  <div class="article-overlay" id="articleOverlay" aria-hidden="true">
+    <div class="article-panel"><div class="article-top"><span class="mono-label">SHINEX / JOURNAL</span><button class="close-button" id="articleClose" type="button" aria-label="Close article"><span>Close</span><b>×</b></button></div><div class="article-layout"><div class="article-media" id="articleMedia"></div><article class="article-copy"><p class="eyebrow"><span id="articleCategory">Residential interiors</span><span class="eyebrow-line"></span></p><h3 id="articleTitle">Article title</h3><div class="article-meta"><span id="articleWorld">ShineX Residential</span><span id="articleReadTime">8 min read</span></div><div id="articleBody"></div><button class="solid-button quote-trigger" type="button">Discuss your project <span>↗</span></button></article></div></div>
+  </div>
+
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <div class="menu-wash"></div><div class="menu-orbit orbit-one"></div><div class="menu-orbit orbit-two"></div>
+    <div class="menu-overlay-header"><a class="brand brand--light" href="#top"><span class="brand-mark">SX</span><span class="brand-copy">ShineX <em>Infra Solutions</em></span></a><button class="close-button" id="menuClose" type="button" aria-label="Close menu"><span>Close</span><b>×</b></button></div>
+    <nav class="mega-menu" aria-label="Main navigation"><span class="menu-kicker">Navigate / <span id="menuWorld">Residential</span></span><a href="#services" class="menu-link">The work <sup>01</sup></a><a href="#beforeAfter" class="menu-link">Transformations <sup>02</sup></a><a href="#process" class="menu-link">Our process <sup>03</sup></a><a href="#catalog" class="menu-link">Material catalog <sup>04</sup></a><a href="#reviews" class="menu-link">Reviews <sup>05</sup></a><a href="#faq" class="menu-link">FAQs <sup>06</sup></a><a href="#insights" class="menu-link">Journal <sup>07</sup></a><button class="menu-quote quote-trigger" type="button">Start a conversation <span>↗</span></button></nav>
+    <div class="menu-footer"><span>Instagram ↗</span><span>WhatsApp ↗</span><span>hello@shinex.in</span></div>
+  </div>
+
+  <div class="quote-overlay" id="quoteOverlay" aria-hidden="true">
+    <div class="quote-backdrop"></div><div class="quote-panel"><div class="quote-panel-top"><span class="mono-label">SHINEX / START A BRIEF</span><button class="close-button" id="quoteClose" type="button" aria-label="Close quote form"><span>Close</span><b>×</b></button></div><div class="quote-form-wrap"><div><p class="eyebrow"><span>Let’s make a place</span><span class="eyebrow-line"></span></p><h3>Tell us what<br /><i>you’re imagining.</i></h3><p class="form-note">A few details are enough to begin. Our team will get back to you within one working day.</p></div><form class="quote-form" id="quoteForm"><label><span>01 / Your name</span><input required name="name" type="text" placeholder="Full name" /></label><label><span>02 / Contact number</span><input required name="contact" type="tel" placeholder="Phone number" /></label><label><span>03 / Email address</span><input required name="email" type="email" placeholder="you@email.com" /></label><label><span>04 / City</span><input required name="city" type="text" placeholder="Where are you based?" /></label><label><span>05 / A note, if you’d like</span><textarea name="message" rows="3" placeholder="Tell us about the space..."></textarea></label><button class="solid-button" type="submit">Send enquiry <span>↗</span></button><p class="form-success" id="formSuccess">Thank you. Your brief is on its way.</p></form></div></div>
+  </div>
+
+  <a class="whatsapp-button magnetic" href="https://wa.me/?text=Hi%20ShineX%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noreferrer"><span class="whatsapp-icon">◔</span><span>WhatsApp us</span></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
