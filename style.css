@@ -52,8 +52,9 @@ h1 i, h2 i, h3 i, .world-option strong i { font-family: Georgia, serif; font-wei
 .world-option { position: relative; display: flex; align-items: flex-end; padding: 3.5vw 4vw; overflow: hidden; color: var(--white); background: #171717; text-align: left; }
 .world-option + .world-option { border-left: 1px solid var(--line); }
 .option-backdrop { position: absolute; inset: 0; opacity: .72; background-position: center; background-size: cover; filter: saturate(1.25) contrast(1.04); transition: transform 1.2s var(--ease), opacity .7s; }
-.world-option--residential .option-backdrop { background-image: linear-gradient(90deg, rgba(0,0,0,.75), rgba(0,0,0,.05)), url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85"); }
-.world-option--commercial .option-backdrop { background-image: linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.12)), url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=85"); }
+.option-backdrop video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.option-backdrop::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.75), rgba(0,0,0,.05)); }
+.world-option--commercial .option-backdrop::after { background: linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.12)); }
 .world-option:hover .option-backdrop { transform: scale(1.06); opacity: .84; }
 .world-option:focus-visible { outline: 2px solid var(--accent); outline-offset: -6px; }
 .option-number { position: absolute; top: 30px; right: 4vw; z-index: 1; color: var(--white); font: 10px var(--mono); }
