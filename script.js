@@ -58,8 +58,8 @@ const experienceData = {
     header: "RESIDENTIAL / 01",
     heroTitle: "Built around<br /><i>the way you live.</i>",
     heroDescription: "Thoughtful homes, made tactile. From the first line on paper to the last light switched on, we make every detail feel inevitable.",
-    heroImage: image("photo-1600607688969-a5bfcd646154"),
-    heroVideo: "assets/hero-residential.mp4",
+    heroImage: "assets/residential-montage-poster.jpg",
+    heroVideo: "assets/residential-montage.mp4",
     introTitle: "Good spaces do<br />more than <i>look good.</i>",
     introCopy: "They hold the morning rush, the quiet pause, the people who gather, and the years that follow. We bring design and execution into one considered conversation.",
     servicesNote: "A full-spectrum residential studio for homes with a point of view.",
@@ -132,8 +132,8 @@ const experienceData = {
     header: "COMMERCIAL + CIVIL / 02",
     heroTitle: "Built for<br /><i>the way business moves.</i>",
     heroDescription: "From bare shell to handover, ShineX brings design, civil execution and every critical service layer into one coordinated build.",
-    heroImage: image("photo-1497366216548-37526070297c"),
-    heroVideo: "assets/hero-commercial.mp4",
+    heroImage: "assets/commercial-montage-poster.jpg",
+    heroVideo: "assets/commercial-montage.mp4",
     introTitle: "The best workspaces<br />make work <i>flow.</i>",
     introCopy: "We create commercial environments that carry a brand, support a team and survive real use. Strategy, build and technical delivery — held under one roof.",
     servicesNote: "A single execution partner for commercial fit-outs, civil contracting and the systems behind them.",
@@ -366,18 +366,53 @@ function closeArticle(immediate = false) {
 }
 
 function chooseWorld(world) {
-  renderExperience(world);
+  if (document.body.classList.contains("is-zooming")) return;
   const picker = $("#worldPicker");
   const shell = $("#siteShell");
+  const option = document.querySelector(`.world-option[data-world="${world}"]`);
+  const backdrop = option ? option.querySelector(".option-backdrop") : null;
+  const cardVideo = backdrop ? backdrop.querySelector("video") : null;
+  const heroVideo = $("#heroVideo");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  renderExperience(world);
   shell.style.display = "block";
   shell.setAttribute("aria-hidden", "false");
   document.body.classList.remove("is-locked");
   motionReady = true;
-  if (window.gsap) {
-    gsap.timeline().to(picker, { autoAlpha: 0, duration: .8, ease: "power3.inOut", onComplete: () => { picker.style.display = "none"; } }).fromTo(".site-header", { y: -30, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .65 }, "-=.2");
-  } else picker.style.display = "none";
-  window.scrollTo(0, 0);
-  window.setTimeout(initMotion, 60);
+  const finishEnter = () => { window.scrollTo(0, 0); window.setTimeout(initMotion, 60); };
+  if (backdrop && cardVideo && window.gsap && !reduceMotion) {
+    // Shared-element zoom: the picked card's own video expands to fill the screen,
+    // then hands over to the same video playing as the world hero background.
+    document.body.classList.add("is-zooming");
+    picker.classList.add("is-zooming");
+    option.classList.add("is-chosen");
+    const rect = backdrop.getBoundingClientRect();
+    document.body.appendChild(backdrop); // keep the same playing video, escape the picker fade
+    backdrop.classList.add("is-zooming");
+    Object.assign(backdrop.style, { position: "fixed", left: `${rect.left}px`, top: `${rect.top}px`, width: `${rect.width}px`, height: `${rect.height}px`, zIndex: "300", opacity: "1", transform: "none", margin: "0" });
+    gsap.to(picker, { autoAlpha: 0, duration: .8, ease: "power3.inOut", onComplete: () => { picker.style.display = "none"; } });
+    gsap.fromTo(".site-header", { y: -30, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .65, delay: .55 });
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      Object.assign(backdrop.style, { left: "0px", top: "0px", width: `${window.innerWidth}px`, height: `${window.innerHeight}px` });
+    }));
+    const syncHero = () => { try { if (heroVideo && heroVideo.readyState >= 1) { heroVideo.currentTime = cardVideo.currentTime; heroVideo.play().catch(() => {}); } } catch (e) {} };
+    window.setTimeout(syncHero, 500);
+    window.setTimeout(() => {
+      syncHero();
+      option.insertBefore(backdrop, option.firstChild);
+      backdrop.classList.remove("is-zooming");
+      backdrop.style.cssText = "";
+      picker.classList.remove("is-zooming");
+      option.classList.remove("is-chosen");
+      document.body.classList.remove("is-zooming");
+      finishEnter();
+    }, 980);
+  } else {
+    if (window.gsap) {
+      gsap.timeline().to(picker, { autoAlpha: 0, duration: .8, ease: "power3.inOut", onComplete: () => { picker.style.display = "none"; } }).fromTo(".site-header", { y: -30, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .65 }, "-=.2");
+    } else picker.style.display = "none";
+    finishEnter();
+  }
 }
 
 function switchWorld() {

@@ -230,3 +230,10 @@ h1 i, h2 i, h3 i, .world-option strong i { font-family: Georgia, serif; font-wei
   .whatsapp-button { padding: 10px; }
   .whatsapp-icon { width: 34px; height: 34px; }.whatsapp-icon img { width: 34px; height: 34px; }
 }
+
+/* World-enter zoom: the picked card's video expands to fullscreen, then lands as the hero background */
+.world-picker.is-zooming .picker-header, .world-picker.is-zooming .picker-intro, .world-picker.is-zooming .picker-footer { opacity: 0; transition: opacity .35s ease; }
+.world-picker.is-zooming .world-option:not(.is-chosen) { opacity: 0; transition: opacity .35s ease; }
+.world-option.is-chosen .option-content, .world-option.is-chosen .option-number { opacity: 0; transition: opacity .3s ease; }
+.option-backdrop.is-zooming { transition: left .95s cubic-bezier(.65,0,.35,1), top .95s cubic-bezier(.65,0,.35,1), width .95s cubic-bezier(.65,0,.35,1), height .95s cubic-bezier(.65,0,.35,1); }
+.option-backdrop.is-zooming::after { opacity: 0; transition: opacity .5s ease; }
