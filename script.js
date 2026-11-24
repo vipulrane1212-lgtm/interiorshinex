@@ -60,6 +60,8 @@ const experienceData = {
     heroDescription: "Thoughtful homes, made tactile. From the first line on paper to the last light switched on, we make every detail feel inevitable.",
     heroImage: "assets/residential-montage-poster.jpg",
     heroVideo: "assets/residential-montage.mp4",
+    heroVideoMobile: "assets/residential-montage-mobile.mp4",
+    heroImageMobile: "assets/residential-montage-mobile-poster.jpg",
     introTitle: "Good spaces do<br />more than <i>look good.</i>",
     introCopy: "They hold the morning rush, the quiet pause, the people who gather, and the years that follow. We bring design and execution into one considered conversation.",
     servicesNote: "A full-spectrum residential studio for homes with a point of view.",
@@ -134,6 +136,8 @@ const experienceData = {
     heroDescription: "From bare shell to handover, ShineX brings design, civil execution and every critical service layer into one coordinated build.",
     heroImage: "assets/commercial-montage-poster.jpg",
     heroVideo: "assets/commercial-montage.mp4",
+    heroVideoMobile: "assets/commercial-montage-mobile.mp4",
+    heroImageMobile: "assets/commercial-montage-mobile-poster.jpg",
     introTitle: "The best workspaces<br />make work <i>flow.</i>",
     introCopy: "We create commercial environments that carry a brand, support a team and survive real use. Strategy, build and technical delivery — held under one roof.",
     servicesNote: "A single execution partner for commercial fit-outs, civil contracting and the systems behind them.",
@@ -269,10 +273,13 @@ function renderExperience(world) {
   $("#heroDescription").textContent = data.heroDescription;
   const heroVideo = $("#heroVideo");
   if (heroVideo) {
-    heroVideo.poster = data.heroImage;
-    if (heroVideo.getAttribute("data-src") !== data.heroVideo) {
-      heroVideo.setAttribute("data-src", data.heroVideo);
-      heroVideo.src = data.heroVideo;
+    const isMobileHero = window.matchMedia("(max-width: 768px)").matches;
+    const heroSrc = isMobileHero && data.heroVideoMobile ? data.heroVideoMobile : data.heroVideo;
+    const heroPoster = isMobileHero && data.heroImageMobile ? data.heroImageMobile : data.heroImage;
+    heroVideo.poster = heroPoster;
+    if (heroVideo.getAttribute("data-src") !== heroSrc) {
+      heroVideo.setAttribute("data-src", heroSrc);
+      heroVideo.src = heroSrc;
       heroVideo.load();
     }
     heroVideo.play().catch(() => {});
