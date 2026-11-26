@@ -7,6 +7,11 @@ const detailImagePool = [
   image("photo-1616486338812-3dadae4b4ace"),
   image("photo-1556912173-46c336c7fd55"),
   image("photo-1617104678098-de229db51175"),
+  image("photo-1552321554-5fefe8c9ef14"),
+  image("photo-1584622650111-993a426fbf0a"),
+  image("photo-1616594039964-ae9021a400a0"),
+  image("photo-1595526114035-0d45ed16cfbf"),
+  image("photo-1556911220-e15b29be8c8f"),
   image("photo-1497366811353-6870744d04b2"),
   image("photo-1497366216548-37526070297c"),
   image("photo-1542744173-8e7e53415bb0"),
@@ -52,18 +57,232 @@ const reviewHighlights = [
   { text: "Extremely beautiful artmanship, finest interior designing which has improved the vibe of my home and made it much more aesthetically pleasing. A trustworthy place for your home renovation/ interior designing. my trust and money was worth.. Good job!", author: "SAMAPTI TRIPATHY", initials: "ST", detail: "Google review", date: "3 months ago" },
 ];
 
+
+const residentialSubReferences = {
+  // 01 / Complete Home Interior Design
+  "1BHK Complete Home Interiors": [
+    { title: "Compact Living & Floating TV Unit", tag: "Living Zone", image: "assets/service-images/residential/001-compact-living-floating-tv-unit.jpg" },
+    { title: "Master Suite Integrated Storage", tag: "Master Bedroom", image: "assets/service-images/residential/002-master-suite-integrated-storage.png" },
+    { title: "Modular Parallel Kitchen Layout", tag: "Parallel Kitchen", image: "assets/service-images/residential/003-modular-parallel-kitchen-layout.webp" },
+    { title: "Minimalist Bathroom & Floating Vanity", tag: "Smart Bathroom", image: "assets/service-images/residential/004-minimalist-bathroom-floating-vanity.jpg" }
+  ],
+  "2BHK Complete Home Interiors": [
+    { title: "Open Concept Living & Dining Lounge", tag: "Living & Dining", image: "assets/service-images/residential/005-open-concept-living-dining-lounge.jpg" },
+    { title: "Master Suite with Wooden Paneling", tag: "Master Bedroom", image: "assets/service-images/residential/006-master-suite-with-wooden-paneling.jpg" },
+    { title: "Kids / Study Room with Murphy Desk", tag: "Kids Room", image: "assets/service-images/residential/007-kids-study-room-with-murphy-desk.jpg" },
+    { title: "L-Shaped Quartz Countertop Kitchen", tag: "Modular Kitchen", image: "assets/service-images/residential/008-l-shaped-quartz-countertop-kitchen.jpg" }
+  ],
+  "3BHK Complete Home Interiors": [
+    { title: "Expansive Formal Living & Foyer Gallery", tag: "Grand Foyer", image: "assets/service-images/residential/009-expansive-formal-living-foyer-gallery.jpg" },
+    { title: "Master Bedroom with Walk-in Dressing", tag: "Master Suite", image: "assets/service-images/residential/010-master-bedroom-with-walk-in-dressing.jpg" },
+    { title: "Parents / Guest Bedroom Classic Paneling", tag: "Guest Suite", image: "assets/service-images/residential/011-parents-guest-bedroom-classic-paneling.jpg" },
+    { title: "Island Kitchen & Breakfast Counter", tag: "Island Kitchen", image: "assets/service-images/residential/012-island-kitchen-breakfast-counter.jpg" }
+  ],
+  "4BHK Complete Home Interiors": [
+    { title: "Grand Double Living Marble Cladding", tag: "Double Living", image: "assets/service-images/residential/013-grand-double-living-marble-cladding.jpg" },
+    { title: "Presidential Master Suite & Balcony", tag: "Master Suite", image: "assets/service-images/residential/014-presidential-master-suite-balcony.jpg" },
+    { title: "Entertainment Lounge & Bar Unit", tag: "Home Lounge", image: "assets/service-images/residential/015-entertainment-lounge-bar-unit.jpg" },
+    { title: "Gourmet Chef's Kitchen with Tall Pantry", tag: "Chef Kitchen", image: "assets/service-images/residential/016-gourmet-chefs-kitchen-with-tall-pantry.jpg" }
+  ],
+
+  // 02 / Types of Bathroom Interior
+  "Modern Minimalist Bathroom": [
+    { title: "Frameless Glass Rain Shower Enclosure", tag: "Rain Shower", image: "assets/service-images/residential/017-frameless-glass-rain-shower-enclosure.jpg" },
+    { title: "Floating Oak Vanity with Matte Black Tapware", tag: "Vanity Unit", image: "assets/service-images/residential/018-floating-oak-vanity-with-matte-black-tapware.jpg" },
+    { title: "Large-Format Terrazzo Wall & Floor Tiles", tag: "Terrazzo Tiles", image: "assets/service-images/residential/019-large-format-terrazzo-wall-floor-tiles.jpg" },
+    { title: "Concealed Niche & Ambient LED Sconces", tag: "Niche Lighting", image: "assets/service-images/residential/020-concealed-niche-ambient-led-sconces.jpg" }
+  ],
+  "Luxury Bathroom": [
+    { title: "Italian Statuario Marble Slabs & Brass Trim", tag: "Statuario Marble", image: "assets/service-images/residential/021-italian-statuario-marble-slabs-brass-trim.jpg" },
+    { title: "Freestanding Acrylic Soaking Tub Setup", tag: "Freestanding Tub", image: "assets/service-images/residential/022-freestanding-acrylic-soaking-tub-setup.jpg" },
+    { title: "Double Basin Quartz Vanity & Fluted Drawers", tag: "Dual Vanity", image: "assets/service-images/residential/023-double-basin-quartz-vanity-fluted-drawers.jpg" },
+    { title: "Brushed Gold Thermostatic Shower System", tag: "Gold Fixtures", image: "assets/service-images/residential/024-brushed-gold-thermostatic-shower-system.jpg" }
+  ],
+  "Contemporary Bathroom": [
+    { title: "Monochrome Slate & Anthracite Fixtures", tag: "Slate Finish", image: "assets/service-images/residential/025-monochrome-slate-anthracite-fixtures.jpg" },
+    { title: "Geometric Patterned Floor & Subway Surround", tag: "Pattern Tiles", image: "assets/service-images/residential/026-geometric-patterned-floor-subway-surround.jpg" },
+    { title: "Wall-Hung Rimless Commode & Concealed Tank", tag: "Concealed Cistern", image: "assets/service-images/residential/027-wall-hung-rimless-commode-concealed-tank.jpg" },
+    { title: "Fluted Glass Partition Screen & Wood Accents", tag: "Fluted Screen", image: "assets/service-images/residential/028-fluted-glass-partition-screen-wood-accents.jpg" }
+  ],
+  "Compact Bathroom": [
+    { title: "Space-Saving Floating Corner Vanity", tag: "Corner Vanity", image: "assets/service-images/residential/029-space-saving-floating-corner-vanity.webp" },
+    { title: "Sliding Glass Shower Cubicle (3x3 ft)", tag: "Sliding Cubicle", image: "assets/service-images/residential/030-sliding-glass-shower-cubicle-3x3-ft.jpg" },
+    { title: "Recessed Wall Storage Niches for Toiletries", tag: "Wall Niches", image: "assets/service-images/residential/031-recessed-wall-storage-niches-for-toiletries.jpg" },
+    { title: "Light-Reflecting Gloss White Porcelain Tiles", tag: "Gloss Tiles", image: "assets/service-images/residential/032-light-reflecting-gloss-white-porcelain-tiles.jpg" }
+  ],
+
+  // 03 / Modular Kitchen Design
+  "L-Shaped Kitchen": [
+    { title: "High-Gloss Acrylic Dual-Tone Cabinets", tag: "Acrylic Finish", image: "assets/service-images/residential/033-high-gloss-acrylic-dual-tone-cabinets.jpg" },
+    { title: "Seamless Quartz Countertop & Undermount Sink", tag: "Quartz Counter", image: "assets/service-images/residential/034-seamless-quartz-countertop-undermount-sink.jpg" },
+    { title: "Corner Carousel Magic Pull-out System", tag: "Magic Corner", image: "assets/service-images/residential/035-corner-carousel-magic-pull-out-system.jpg" },
+    { title: "Under-Cabinet Warm LED Task Profiles", tag: "Task Light", image: "assets/service-images/residential/036-under-cabinet-warm-led-task-profiles.jpg" }
+  ],
+  "U-Shaped Kitchen": [
+    { title: "Full-Surround High-Capacity Storage Layout", tag: "Surround Layout", image: "assets/service-images/residential/037-full-surround-high-capacity-storage-layout.jpg" },
+    { title: "Integrated Breakfast Counter with Bar Stools", tag: "Breakfast Bar", image: "assets/service-images/residential/038-integrated-breakfast-counter-with-bar-stools.jpg" },
+    { title: "Built-in Microwave & Oven Tall Units", tag: "Tall Appliance Unit", image: "assets/service-images/residential/039-built-in-microwave-oven-tall-units.jpg" },
+    { title: "Soft-Close Tandem Drawer Organization", tag: "Tandem Drawers", image: "assets/service-images/residential/040-soft-close-tandem-drawer-organization.jpg" }
+  ],
+  "Parallel Kitchen": [
+    { title: "Ergonomic Golden Work Triangle Layout", tag: "Work Triangle", image: "assets/service-images/residential/041-ergonomic-golden-work-triangle-layout.jpg" },
+    { title: "Handleless Gola Profile Matt Shutters", tag: "Gola Profile", image: "assets/service-images/residential/042-handleless-gola-profile-matt-shutters.jpg" },
+    { title: "Heavy-Duty Stainless Steel Pull-outs", tag: "Spice Pull-outs", image: "assets/service-images/residential/043-heavy-duty-stainless-steel-pull-outs.jpg" },
+    { title: "Durable Black Granite & Slim Chimney", tag: "Granite & Hood", image: "assets/service-images/residential/044-durable-black-granite-slim-chimney.jpg" }
+  ],
+
+  // 04 / Wardrobe & Bed Interiors
+  "Sliding Door Wardrobe": [
+    { title: "Tinted Glass & Black Aluminium Frame", tag: "Glass Shutters", image: "assets/service-images/residential/045-sliding-door-wardrobe.jpg" },
+    { title: "Lacquered Glass Shutter with Sensor LEDs", tag: "Sensor Lighting", image: "assets/service-images/residential/046-lacquered-glass-shutters-sensor-led.jpg" },
+    { title: "Heavy-Duty Soft-Close Double Track System", tag: "Double Track", image: "assets/service-images/residential/047-soft-close-sliding-mechanism-double-track.jpg" },
+    { title: "Internal Velvet-Lined Jewelry & Watch Trays", tag: "Organizer Drawers", image: "assets/service-images/residential/048-velvet-lined-jewellery-watch-trays.webp" }
+  ],
+  "Walk-in Wardrobe": [
+    { title: "Open Boutique Display Wardrobe System", tag: "Boutique Display", image: "assets/service-images/residential/049-walk-in-wardrobe.jpg" },
+    { title: "Center Island Dressing Vanity & Deep Drawers", tag: "Island Vanity", image: "assets/service-images/residential/050-center-island-dressing-vanity-deep-drawers.jpg" },
+    { title: "Full-Length Ring Light Dressing Mirror", tag: "Dressing Mirror", image: "assets/service-images/residential/051-full-length-ring-light-dressing-mirror.jpg" },
+    { title: "Illuminated Handbag & Shoe Display Shelves", tag: "Shoe & Bag Display", image: "assets/service-images/residential/052-illuminated-handbag-shoe-display-shelves.jpg" }
+  ],
+  "Upholstered Bed Design": [
+    { title: "Full-Wall Fluted Velvet Headboard Paneling", tag: "Fluted Velvet", image: "assets/service-images/residential/053-full-wall-fluted-velvet-headboard-paneling.jpg" },
+    { title: "Curved Bouclé Fabric Bed Frame & Sconces", tag: "Bouclé Frame", image: "assets/service-images/residential/054-curved-boucle-fabric-bed-frame-sconces.jpg" },
+    { title: "Tufted Italian Leather Headboard Architecture", tag: "Tufted Leather", image: "assets/service-images/residential/055-tufted-italian-leather-headboard-architecture.jpg" },
+    { title: "Low-Platform Japanese-Inspired Fabric Bed", tag: "Platform Bed", image: "assets/service-images/residential/056-low-platform-japanese-inspired-fabric-bed.webp" }
+  ],
+  "Storage Bed Design": [
+    { title: "Hydraulic Lift-Up King Storage Compartment", tag: "Hydraulic Lift", image: "assets/service-images/residential/057-hydraulic-lift-up-king-storage-compartment.png" },
+    { title: "Side Deep Rolling Walnut Storage Drawers", tag: "Drawer Storage", image: "assets/service-images/residential/058-side-deep-rolling-walnut-storage-drawers.jpg" },
+    { title: "Headboard Concealed Charging Shelf & Niche", tag: "Headboard Niche", image: "assets/service-images/residential/059-headboard-concealed-charging-shelf-niche.jpg" },
+    { title: "Anti-Moisture Laminated Storage Boxes", tag: "Laminated Boxes", image: "assets/service-images/residential/060-anti-moisture-laminated-storage-boxes.jpg" }
+  ],
+  "Custom Carpentry & Wardrobe Work": [
+    { title: "Solid Teak & Natural Rattan Cane Doors", tag: "Cane & Teak", image: "assets/service-images/residential/061-solid-teak-natural-rattan-cane-doors.jpg" },
+    { title: "Fluted Oak Paneling with Seamless Hidden Door", tag: "Hidden Door", image: "assets/service-images/residential/062-fluted-oak-paneling-with-seamless-hidden-door.jpg" },
+    { title: "Integrated Study Desk in Wardrobe Alcove", tag: "Study Alcove", image: "assets/service-images/residential/063-integrated-study-desk-in-wardrobe-alcove.jpg" },
+    { title: "Architectural Display Bookcase & Ledges", tag: "Display Shelving", image: "assets/service-images/residential/064-architectural-display-bookcase-ledges.jpg" }
+  ],
+
+  // 05 / Luxury Villa & Bungalow Interior Design
+  "Double-height living room & grand entrance foyer design": [
+    { title: "20-Foot Feature Wall with Bookmatched Marble", tag: "Feature Wall", image: "assets/service-images/residential/065-20-foot-feature-wall-with-bookmatched-marble.jpg" },
+    { title: "Cascading Crystal Chandelier Installation", tag: "Chandelier", image: "assets/service-images/residential/066-cascading-crystal-chandelier-installation.png" },
+    { title: "Architectural Curved Staircase & Glass Railing", tag: "Curved Staircase", image: "assets/service-images/residential/067-architectural-curved-staircase-glass-railing.jpg" },
+    { title: "Solid Teak Double Pivot Grand Entrance Door", tag: "Pivot Door", image: "assets/service-images/residential/068-solid-teak-double-pivot-grand-entrance-door.jpg" }
+  ],
+  "Custom marble, Italian stone & wooden flooring work": [
+    { title: "High-Gloss Botticino Italian Marble Flooring", tag: "Italian Marble", image: "assets/service-images/residential/069-high-gloss-botticino-italian-marble-flooring.png" },
+    { title: "Herringbone Hardwood Engineered Flooring", tag: "Herringbone Oak", image: "assets/service-images/residential/070-herringbone-hardwood-engineered-flooring.jpg" },
+    { title: "Seamless Backlit Onyx Feature Inlay", tag: "Backlit Onyx", image: "assets/service-images/residential/071-seamless-backlit-onyx-feature-inlay.png" },
+    { title: "Flamed Granite Outdoor Veranda Paving", tag: "Outdoor Granite", image: "assets/service-images/residential/072-flamed-granite-outdoor-veranda-paving.jpg" }
+  ],
+  "Private home theater, bar lounge & gym room setup": [
+    { title: "Acoustic Suede Paneling & Dolby Cinema Setup", tag: "Home Cinema", image: "assets/service-images/residential/073-acoustic-suede-paneling-dolby-cinema-setup.jpg" },
+    { title: "Starry Sky Fiber-Optic Acoustic Ceiling", tag: "Star Ceiling", image: "assets/service-images/residential/074-starry-sky-fiber-optic-acoustic-ceiling.jpg" },
+    { title: "Luxury Onyx Cocktail Bar & Climate Cellar", tag: "Cocktail Bar", image: "assets/service-images/residential/075-luxury-onyx-cocktail-bar-climate-cellar.jpg" },
+    { title: "Home Wellness Gym with Mirrored Wall", tag: "Wellness Gym", image: "assets/service-images/residential/076-home-wellness-gym-with-mirrored-wall.jpg" }
+  ],
+  "Designer staircase, glass railings & chandelier installation": [
+    { title: "Cantilevered Floating Wooden Treads", tag: "Floating Treads", image: "assets/service-images/residential/077-cantilevered-floating-wooden-treads.jpg" },
+    { title: "Ultra-Clear Laminated Glass Balustrade", tag: "Glass Balustrade", image: "assets/service-images/residential/078-ultra-clear-laminated-glass-balustrade.jpg" },
+    { title: "Linear Under-Tread Warm White LED Strip", tag: "Step Lights", image: "assets/service-images/residential/079-linear-under-tread-warm-white-led-strip.jpg" },
+    { title: "Sculptural Brass Pendant Cluster Installation", tag: "Pendant Cluster", image: "assets/service-images/residential/080-sculptural-brass-pendant-cluster-installation.jpg" }
+  ],
+  "Outdoor patio, pergola, balcony & landscape design": [
+    { title: "Motorized Louvered Aluminium Pergola Setup", tag: "Louvered Pergola", image: "assets/service-images/residential/081-motorized-louvered-aluminium-pergola-setup.webp" },
+    { title: "All-Weather Synthetic Rattan Balcony Lounge", tag: "Outdoor Lounge", image: "assets/service-images/residential/082-all-weather-synthetic-rattan-balcony-lounge.jpg" },
+    { title: "Vertical Living Green Wall & Automated Drip", tag: "Living Wall", image: "assets/service-images/residential/083-vertical-living-green-wall-automated-drip.jpg" },
+    { title: "Warm Architectural Landscape Bollards & Lights", tag: "Garden Lighting", image: "assets/service-images/residential/084-warm-architectural-landscape-bollards-lights.jpg" }
+  ],
+
+  // 06 / Flat & Apartment Renovation Services
+  "False Ceiling & POP Work": [
+    { title: "Minimalist Perimeter Cove Diffused LED", tag: "Cove Ceiling", image: "assets/service-images/residential/085-minimalist-perimeter-cove-diffused-led.jpg" },
+    { title: "Magnetic Slim Track Lighting Channels", tag: "Magnetic Track", image: "assets/service-images/residential/086-magnetic-slim-track-lighting-channels.jpg" },
+    { title: "Modern POP Wall Mouldings & Geometric Trim", tag: "Wall Mouldings", image: "assets/service-images/residential/087-modern-pop-wall-mouldings-geometric-trim.jpg" },
+    { title: "Acoustic Drop Gypsum Board Ceiling Details", tag: "Acoustic Ceiling", image: "assets/service-images/residential/088-acoustic-drop-gypsum-board-ceiling-details.jpg" }
+  ],
+  "Civil & Masonry Work": [
+    { title: "Internal Non-Loadbearing Wall Breaking", tag: "Space Opening", image: "assets/service-images/residential/089-internal-non-loadbearing-wall-breaking.jpg" },
+    { title: "Siporex Lightweight Block Partition Walls", tag: "Block Masonry", image: "assets/service-images/residential/090-siporex-lightweight-block-partition-walls.webp" },
+    { title: "Laser-Leveled Floor Screed & Waterproofing", tag: "Floor Screed", image: "assets/service-images/residential/091-laser-leveled-floor-screed-waterproofing.jpg" },
+    { title: "Door Frame Widening & Lintel Reinforcement", tag: "Openings", image: "assets/service-images/residential/092-door-frame-widening-lintel-reinforcement.jpg" }
+  ],
+  "Plumbing & Electrical Work": [
+    { title: "Concealed CPVC/UPVC Piping & Pressure Test", tag: "Piping Network", image: "assets/service-images/residential/093-concealed-cpvc-upvc-piping-pressure-test.webp" },
+    { title: "Modular Touch Switches & Concealed Conduiting", tag: "Smart Switches", image: "assets/service-images/residential/094-modular-touch-switches-concealed-conduiting.jpg" },
+    { title: "Dual-Circuit Distribution Board & Protection", tag: "DB Protection", image: "assets/service-images/residential/095-dual-circuit-distribution-board-protection.jpg" },
+    { title: "Thermostatic Diverter & Wall Cistern Setup", tag: "Sanitary Fittings", image: "assets/service-images/residential/096-thermostatic-diverter-wall-cistern-setup.jpg" }
+  ],
+  "Interior Painting": [
+    { title: "Royale Luxury Silk Smooth Wall Emulsion", tag: "Silk Emulsion", image: "assets/service-images/residential/097-royale-luxury-silk-smooth-wall-emulsion.jpg" },
+    { title: "Artisanal Venetian Plaster Accent Wall", tag: "Venetian Plaster", image: "assets/service-images/residential/098-artisanal-venetian-plaster-accent-wall.jpg" },
+    { title: "PU / Duco Enamel Paint on Doors & Trims", tag: "Duco Coating", image: "assets/service-images/residential/099-pu-duco-enamel-paint-on-doors-trims.jpg" },
+    { title: "Anti-Damp Moisture Barrier Primer Coating", tag: "Moisture Primer", image: "assets/service-images/residential/100-anti-damp-moisture-barrier-primer-coating.webp" }
+  ],
+  "Fabrication Work": [
+    { title: "Slim Black MS Steel & Fluted Glass Partitions", tag: "Fluted Partitions", image: "assets/service-images/residential/101-slim-black-ms-steel-fluted-glass-partitions.jpg" },
+    { title: "Laser-Cut Balcony Safety Grills & Railings", tag: "Safety Grills", image: "assets/service-images/residential/102-laser-cut-balcony-safety-grills-railings.jpg" },
+    { title: "Heavy-Duty Safety Door with Digital Smart Lock", tag: "Smart Safety Door", image: "assets/service-images/residential/103-heavy-duty-safety-door-with-digital-smart-lock.jpg" },
+    { title: "Custom Structural Steel Loft & Storage Frame", tag: "Steel Lofts", image: "assets/service-images/residential/104-custom-structural-steel-loft-storage-frame.jpg" }
+  ]
+};
+
+const commercialSubImages = {
+  "Office layout reconfiguration & space expansion": "assets/service-images/commercial/C01-office-layout-reconfiguration-space-expansion.jpg",
+  "Old office dismantling, demolition & debris removal": "assets/service-images/commercial/C02-old-office-dismantling-demolition-debris-removal.jpg",
+  "Office flooring, ceiling & lighting upgrade": "assets/service-images/commercial/C03-office-flooring-ceiling-lighting-upgrade.jpg",
+  "Corporate reception, cabin & conference room makeover": "assets/service-images/commercial/C04-corporate-reception-cabin-conference-room-makeover.jpg",
+  "Office washroom, pantry & civil refurbishment": "assets/service-images/commercial/C05-office-washroom-pantry-civil-refurbishment.jpg",
+  "Turnkey warm shell to furnished office fit-out": "assets/service-images/commercial/C06-turnkey-warm-shell-to-furnished-office-fit-out.jpg",
+  "Complete civil, flooring & sub-floor leveling": "assets/service-images/commercial/C07-complete-civil-flooring-sub-floor-leveling.jpg",
+  "End-to-end MEP, HVAC & electrical fit-out": "assets/service-images/commercial/C08-end-to-end-mep-hvac-electrical-fit-out.jpg",
+  "Custom cabins, workstations & interior carpentry": "assets/service-images/commercial/C09-custom-cabins-workstations-interior-carpentry.jpg",
+  "Fire safety, IT server room & security integration": "assets/service-images/commercial/C10-fire-safety-it-server-room-security-integration.jpg",
+  "Linear & cluster employee workstation desks": "assets/service-images/commercial/C11-linear-cluster-employee-workstation-desks.jpg",
+  "Executive MD desk & manager cabin furniture": "assets/service-images/commercial/C12-executive-md-desk-manager-cabin-furniture.jpg",
+  "Conference table & boardroom seating setup": "assets/service-images/commercial/C13-conference-table-boardroom-seating-setup.jpg",
+  "Ergonomic office chairs & lounge sofas": "assets/service-images/commercial/C14-ergonomic-office-chairs-lounge-sofas.jpg",
+  "Custom reception desk, pedestals & storage cabinets": "assets/service-images/commercial/C15-custom-reception-desk-pedestals-storage-cabinets.jpg",
+  "Frameless toughened glass cabin partitions": "assets/service-images/commercial/C16-frameless-toughened-glass-cabin-partitions.jpg",
+  "Aluminum framed & slim profile glass partitions": "assets/service-images/commercial/C17-aluminum-framed-slim-profile-glass-partitions.png",
+  "Acoustic double-glazed soundproof glass cabins": "assets/service-images/commercial/C18-acoustic-double-glazed-soundproof-glass-cabins.jpg",
+  "Sliding, folding & demountable glass walls": "assets/service-images/commercial/C19-sliding-folding-demountable-glass-walls.jpg",
+  "Glass frosted film, blinds & branding graphics": "assets/service-images/commercial/C20-glass-frosted-film-blinds-branding-graphics.jpg",
+  "Gypsum board & POP seamless false ceiling": "assets/service-images/commercial/C21-gypsum-board-pop-seamless-false-ceiling.jpg",
+  "Armstrong grid & mineral fiber tile ceiling": "assets/service-images/commercial/C22-armstrong-grid-mineral-fiber-tile-ceiling.webp",
+  "Open cell, baffle & metal strip ceilings": "assets/service-images/commercial/C23-open-cell-baffle-metal-strip-ceilings.png",
+  "Architectural LED profile, track & panel lighting": "assets/service-images/commercial/C24-architectural-led-profile-track-panel-lighting.jpg",
+  "Exposed industrial ceiling painting & hanging lights": "assets/service-images/commercial/C25-exposed-industrial-ceiling-painting-hanging-lights.png",
+  "Commercial VRF, VRV, ductable & cassette AC installation": "assets/service-images/commercial/C26-commercial-vrf-vrv-ductable-cassette-ac-installation.jpg",
+  "Complete office electrical wiring, DB box & UPS setup": "assets/service-images/commercial/C27-complete-office-electrical-wiring-db-box-ups-setup.jpg",
+  "Structured LAN cabling, Wi-Fi & server room setup": "assets/service-images/commercial/C28-structured-lan-cabling-wi-fi-server-room-setup.webp",
+  "Fire fighting sprinklers, smoke detectors & alarm systems": "assets/service-images/commercial/C29-fire-fighting-sprinklers-smoke-detectors-alarm-systems.png",
+  "Commercial plumbing, drainage & fresh air ventilation": "assets/service-images/commercial/C30-commercial-plumbing-drainage-fresh-air-ventilation.jpg",
+  "2D CAD space planning & furniture layout drawings": "assets/service-images/commercial/C31-2d-cad-space-planning-furniture-layout-drawings.jpg",
+  "Photorealistic 3D office & retail interior renders": "assets/service-images/commercial/C32-photorealistic-3d-office-retail-interior-renders.jpg",
+  "360-degree virtual reality (VR) interior tours": "assets/service-images/commercial/C33-360-degree-virtual-reality-vr-interior-tours.jpg",
+  "3D animated commercial walkthrough videos": "assets/service-images/commercial/C34-3d-animated-commercial-walkthrough-videos.webp",
+  "Material mood boards & working construction blueprints": "assets/service-images/commercial/C35-material-mood-boards-working-construction-blueprints.webp"
+};
+
 const experienceData = {
   residential: {
     name: "Residential",
     header: "RESIDENTIAL / 01",
     heroTitle: "Built around<br /><i>the way you live.</i>",
-    heroDescription: "Thoughtful homes, made tactile. From the first line on paper to the last light switched on, we make every detail feel inevitable.",
+    heroDescription: "Navi Mumbai’s most trusted turnkey home interior studio — backed by Sneha Enterprises’ Class-1 execution legacy since 2011. From 1BHK homes to luxury villas, delivered on time with zero hidden surprises.",
     heroImage: "assets/residential-montage-poster.jpg",
     heroVideo: "assets/residential-montage.mp4",
     heroVideoMobile: "assets/residential-montage-mobile.mp4",
     heroImageMobile: "assets/residential-montage-mobile-poster.jpg",
     introTitle: "Good spaces do<br />more than <i>look good.</i>",
     introCopy: "They hold the morning rush, the quiet pause, the people who gather, and the years that follow. We bring design and execution into one considered conversation.",
+    pillars: [
+      { title: "Human Rhythm", desc: "Calibrated around daily rituals, natural sunlight, and quiet spatial ease." },
+      { title: "Unified Execution", desc: "Design studio and Class-1 civil engineering under one roof. Zero handoff friction." },
+      { title: "Enduring Materiality", desc: "Honest stone, genuine architectural timber, and craft built to outlast trends." }
+    ],
     servicesNote: "A full-spectrum residential studio for homes with a point of view.",
     comparisonName: "A home with a new rhythm",
     beforeImage: "https://vipulrane1212-lgtm.github.io/shinex-interior/images/transformations/seawoods_before.jpg",
@@ -81,28 +300,65 @@ const experienceData = {
     services: [
       {
         title: "Complete Home Interior Design",
-        image: image("photo-1600607687939-ce8a6c25118c"),
-        items: ["2BHK, 3BHK & 4BHK turnkey home interiors", "Living room, TV unit & foyer area design", "Master bedroom, kids room & guest room interiors", "False ceiling, ambient lighting & wall painting", "Custom home furniture, sofas & soft furnishings"]
+        image: "assets/service-images/residential/013-grand-double-living-marble-cladding.jpg",
+        items: [
+          "1BHK Complete Home Interiors",
+          "2BHK Complete Home Interiors",
+          "3BHK Complete Home Interiors",
+          "4BHK Complete Home Interiors"
+        ]
       },
       {
-        title: "Turnkey House Construction & Civil Contracting",
-        image: image("photo-1503387762-592deb58ef4e"),
-        items: ["Architectural floor plans & structural engineering drawings", "Excavation, foundation & RCC slab structure construction", "Brickwork, internal plastering & waterproofing work", "Complete plumbing, drainage & electrical concealed wiring", "Exterior elevation, compound wall & terrace finishing"]
+        title: "Types of Bathroom Interior",
+        image: "assets/service-images/residential/017-frameless-glass-rain-shower-enclosure.jpg",
+        items: [
+          "Modern Minimalist Bathroom",
+          "Luxury Bathroom",
+          "Contemporary Bathroom",
+          "Compact Bathroom"
+        ]
       },
       {
-        title: "Modular Kitchen & Wardrobe Design",
-        image: image("photo-1556912173-46c336c7fd55"),
-        items: ["L-shaped, U-shaped, parallel & island modular kitchens", "Acrylic, laminate, PU & glass finish kitchen cabinets", "Sliding, hinged & walk-in bedroom wardrobes", "Built-in kitchen appliances, hob, chimney & tall units", "Quartz, granite countertops & kitchen backsplash tiling"]
+        title: "Modular Kitchen Design",
+        image: "assets/service-images/residential/033-high-gloss-acrylic-dual-tone-cabinets.jpg",
+        items: [
+          "L-Shaped Kitchen",
+          "U-Shaped Kitchen",
+          "Parallel Kitchen"
+        ]
+      },
+      {
+        title: "Wardrobe & Bed Interiors",
+        image: "assets/service-images/residential/046-lacquered-glass-shutters-sensor-led.jpg",
+        items: [
+          "Sliding Door Wardrobe",
+          "Walk-in Wardrobe",
+          "Upholstered Bed Design",
+          "Storage Bed Design",
+          "Custom Carpentry & Wardrobe Work"
+        ]
       },
       {
         title: "Luxury Villa & Bungalow Interior Design",
-        image: image("photo-1600607687920-4e2a09cf159d"),
-        items: ["Double-height living room & grand entrance foyer design", "Custom marble, Italian stone & wooden flooring work", "Private home theater, bar lounge & gym room setup", "Designer staircase, glass railings & chandelier installation", "Outdoor patio, pergola, balcony & landscape design"]
+        image: "assets/service-images/residential/065-20-foot-feature-wall-with-bookmatched-marble.jpg",
+        items: [
+          "Double-height living room & grand entrance foyer design",
+          "Custom marble, Italian stone & wooden flooring work",
+          "Private home theater, bar lounge & gym room setup",
+          "Designer staircase, glass railings & chandelier installation",
+          "Outdoor patio, pergola, balcony & landscape design"
+        ]
       },
       {
         title: "Flat & Apartment Renovation Services",
-        image: image("photo-1617104678098-de229db51175"),
-        items: ["Old flat breaking, wall modification & space expansion", "Complete bathroom, toilet & plumbing pipe replacement", "Old kitchen remodeling & new floor tile laying", "Electrical rewiring, new switchboards & AC piping", "Seepage repair, crack filling & full home repainting"]
+        image: "assets/service-images/residential/088-acoustic-drop-gypsum-board-ceiling-details.jpg",
+        items: [
+          "False Ceiling & POP Work",
+          "Civil & Masonry Work",
+          "Plumbing & Electrical Work",
+          "Interior Painting",
+          "Fabrication Work"
+        ]
       }
     ],
     process: [
@@ -120,7 +376,7 @@ const experienceData = {
     ],
     insightsCopy: "Practical guidance for homeowners planning interiors, renovations and turnkey construction — without losing the feeling behind the brief.",
     blogs: [
-      ["Complete Home Interior Design for 2BHK, 3BHK and 4BHK Homes", "RESIDENTIAL INTERIORS", "A practical guide to planning a complete home interior, from space planning and storage to lighting, materials and final styling.", "8 min read", image("photo-1600607687939-ce8a6c25118c")],
+      ["Complete Home Interior Design for 1BHK, 2BHK, 3BHK and 4BHK Homes", "RESIDENTIAL INTERIORS", "A practical guide to planning a complete home interior, from space planning and storage to lighting, materials and final styling.", "8 min read", image("photo-1600607687939-ce8a6c25118c")],
       ["How to Plan a Turnkey House Construction Project", "TURNKEY CONSTRUCTION", "The key decisions to make before construction begins — drawings, approvals, structure, services, finishes, budget and handover.", "9 min read", image("photo-1503387762-592deb58ef4e")],
       ["Modular Kitchen Design Ideas for Indian Homes", "KITCHEN DESIGN", "Explore practical kitchen layouts, cabinet finishes, work triangles, storage planning and countertop choices for everyday Indian cooking.", "7 min read", image("photo-1556912173-46c336c7fd55")],
       ["Luxury Villa Interior Design That Still Feels Like Home", "VILLA DESIGN", "How to balance scale, stone, natural light, furniture and personal detail in a villa or bungalow interior without over-designing it.", "8 min read", image("photo-1600607687920-4e2a09cf159d")],
@@ -133,13 +389,18 @@ const experienceData = {
     name: "Commercial & Civil",
     header: "COMMERCIAL + CIVIL / 02",
     heroTitle: "Built for<br /><i>the way business moves.</i>",
-    heroDescription: "From bare shell to handover, ShineX brings design, civil execution and every critical service layer into one coordinated build.",
+    heroDescription: "Navi Mumbai’s trusted commercial interior & Class-1 civil contractor — backed by Sneha Enterprises since 2011. Turnkey corporate offices, MEP systems, and fit-outs engineered for business performance.",
     heroImage: "assets/commercial-montage-poster.jpg",
     heroVideo: "assets/commercial-montage.mp4",
     heroVideoMobile: "assets/commercial-montage-mobile.mp4",
     heroImageMobile: "assets/commercial-montage-mobile-poster.jpg",
     introTitle: "The best workspaces<br />make work <i>flow.</i>",
     introCopy: "We create commercial environments that carry a brand, support a team and survive real use. Strategy, build and technical delivery — held under one roof.",
+    pillars: [
+      { title: "Work Flow", desc: "Spatial acoustics, team collaboration zones, and focus-first agile layouts." },
+      { title: "Turnkey Delivery", desc: "Civil contracting, MEP systems, and fit-outs delivered on strict handover schedules." },
+      { title: "Brand Presence", desc: "Physical environments engineered to project corporate identity and survive heavy use." }
+    ],
     servicesNote: "A single execution partner for commercial fit-outs, civil contracting and the systems behind them.",
     comparisonName: "From bare shell to business ready",
     beforeImage: "https://vipulrane1212-lgtm.github.io/shinex-interior/images/transformations/commercial_office_before.jpg",
@@ -157,52 +418,37 @@ const experienceData = {
     services: [
       {
         title: "Corporate Office Renovation & Remodeling",
-        image: image("photo-1497366811353-6870744d04b2"),
+        image: "assets/service-images/commercial/C04-corporate-reception-cabin-conference-room-makeover.jpg",
         items: ["Office layout reconfiguration & space expansion", "Old office dismantling, demolition & debris removal", "Office flooring, ceiling & lighting upgrade", "Corporate reception, cabin & conference room makeover", "Office washroom, pantry & civil refurbishment"]
       },
       {
         title: "Bare Shell to Full Office Fit-Out",
-        image: image("photo-1497366216548-37526070297c"),
+        image: "assets/service-images/commercial/C08-end-to-end-mep-hvac-electrical-fit-out.jpg",
         items: ["Turnkey warm shell to furnished office fit-out", "Complete civil, flooring & sub-floor leveling", "End-to-end MEP, HVAC & electrical fit-out", "Custom cabins, workstations & interior carpentry", "Fire safety, IT server room & security integration"]
       },
       {
         title: "Modular Office Furniture & Workstation Setup",
-        image: image("photo-1556761175-b413da4baf72"),
+        image: "assets/service-images/commercial/C15-custom-reception-desk-pedestals-storage-cabinets.jpg",
         items: ["Linear & cluster employee workstation desks", "Executive MD desk & manager cabin furniture", "Conference table & boardroom seating setup", "Ergonomic office chairs & lounge sofas", "Custom reception desk, pedestals & storage cabinets"]
       },
       {
         title: "Glass Partition & Office Cabin Installation",
-        image: image("photo-1542744173-8e7e53415bb0"),
+        image: "assets/service-images/commercial/C20-glass-frosted-film-blinds-branding-graphics.jpg",
         items: ["Frameless toughened glass cabin partitions", "Aluminum framed & slim profile glass partitions", "Acoustic double-glazed soundproof glass cabins", "Sliding, folding & demountable glass walls", "Glass frosted film, blinds & branding graphics"]
       },
       {
         title: "Commercial False Ceiling & Lighting Contractors",
-        image: image("photo-1497366754035-f200968a6e72"),
+        image: "assets/service-images/commercial/C25-exposed-industrial-ceiling-painting-hanging-lights.png",
         items: ["Gypsum board & POP seamless false ceiling", "Armstrong grid & mineral fiber tile ceiling", "Open cell, baffle & metal strip ceilings", "Architectural LED profile, track & panel lighting", "Exposed industrial ceiling painting & hanging lights"]
       },
       {
-        title: "Acoustic & Office Soundproofing Solutions",
-        image: image("photo-1497366811353-6870744d04b2"),
-        items: ["Soundproof conference & meeting room setup", "Fabric, wooden slatted & PET acoustic wall panels", "Acoustic ceiling baffles & hanging sound clouds", "Soundproof office phone booths & meeting pods", "Acoustic door seals & double-glazed window treatments"]
-      },
-      {
-        title: "Commercial Flooring, Carpet & Epoxy Work",
-        image: image("photo-1497366216548-37526070297c"),
-        items: ["Commercial carpet tiles & wall-to-wall carpeting", "Luxury vinyl plank (LVP), SPC & wooden flooring", "Industrial epoxy & PU screed flooring", "Vitrified tiles, marble & granite flooring work", "Raised access flooring for server & IT rooms"]
-      },
-      {
         title: "MEP, HVAC (AC) & Electrical Contracting",
-        image: image("photo-1556761175-b413da4baf72"),
+        image: "assets/service-images/commercial/C27-complete-office-electrical-wiring-db-box-ups-setup.jpg",
         items: ["Commercial VRF, VRV, ductable & cassette AC installation", "Complete office electrical wiring, DB box & UPS setup", "Structured LAN cabling, Wi-Fi & server room setup", "Fire fighting sprinklers, smoke detectors & alarm systems", "Commercial plumbing, drainage & fresh air ventilation"]
       },
       {
-        title: "Commercial Civil & Interior Contracting",
-        image: image("photo-1504307651254-35680f356dfd"),
-        items: ["Brickwork, block masonry & wall plastering", "Washroom, restroom & wet pantry civil construction", "Structural steel mezzanine floor & loft fabrication", "Commercial waterproofing, screeding & structural repairs", "Building facade, ACP cladding & exterior civil work"]
-      },
-      {
         title: "3D Commercial Interior Rendering & Walkthroughs",
-        image: image("photo-1497366754035-f200968a6e72"),
+        image: "assets/service-images/commercial/C32-photorealistic-3d-office-retail-interior-renders.jpg",
         items: ["2D CAD space planning & furniture layout drawings", "Photorealistic 3D office & retail interior renders", "360-degree virtual reality (VR) interior tours", "3D animated commercial walkthrough videos", "Material mood boards & working construction blueprints"]
       }
     ],
@@ -245,8 +491,17 @@ function titleMarkup(title) {
   return title;
 }
 
+function editorialTitleMarkup(title) {
+  const parts = title.split(" & ");
+  if (parts.length > 1) return `${parts[0]} <i>&amp; ${parts.slice(1).join(" & ")}</i>`;
+  const words = title.trim().split(/\s+/);
+  if (words.length >= 4) return `${words.slice(0, -2).join(" ")} <i>${words.slice(-2).join(" ")}</i>`;
+  if (words.length >= 2) return `${words.slice(0, -1).join(" ")} <i>${words[words.length - 1]}</i>`;
+  return title;
+}
+
 function updateSeo(data) {
-  const description = `${data.name} by ShineX Infra Solutions — ${data.insightsCopy}`;
+  const description = `${data.name} in Navi Mumbai by ShineX Infra Solutions (Parent Company: Sneha Enterprises) — ${data.heroDescription}`;
   $("#metaDescription").setAttribute("content", description);
   let schema = $("#seoSchema");
   if (!schema) {
@@ -258,9 +513,14 @@ function updateSeo(data) {
   schema.textContent = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: `ShineX ${data.name} — Interiors and Execution`,
+    name: `ShineX ${data.name} — Trusted Interior & Civil Execution in Navi Mumbai`,
     description,
-    publisher: { "@type": "Organization", name: "ShineX Infra Solutions" },
+    areaServed: ["Navi Mumbai", "Mumbai", "Thane"],
+    publisher: {
+      "@type": "Organization",
+      name: "ShineX Infra Solutions",
+      parentOrganization: { "@type": "Organization", name: "Sneha Enterprises" }
+    },
     hasPart: data.blogs.map(blog => ({ "@type": "Article", headline: blog[0], description: blog[2], articleSection: blog[1], publisher: { "@type": "Organization", name: "ShineX Infra Solutions" } }))
   });
 }
@@ -286,6 +546,14 @@ function renderExperience(world) {
   }
   $("#introTitle").innerHTML = data.introTitle;
   $("#introCopy").textContent = data.introCopy;
+  if (data.pillars) {
+    data.pillars.forEach((pillar, i) => {
+      const titleEl = $(`#pillar${i + 1}Title`);
+      const descEl = $(`#pillar${i + 1}Desc`);
+      if (titleEl) titleEl.textContent = pillar.title;
+      if (descEl) descEl.textContent = pillar.desc;
+    });
+  }
   $("#servicesNote").textContent = data.servicesNote;
   $("#comparisonName").textContent = data.comparisonName;
   $("#comparisonBefore").style.backgroundImage = `linear-gradient(90deg, rgba(0,0,0,.1), rgba(255,255,255,.12)), url("${data.beforeImage}")`;
@@ -295,6 +563,8 @@ function renderExperience(world) {
   $("#catalogCopy").textContent = data.catalogCopy;
   $("#insightsCopy").textContent = data.insightsCopy;
   $("#menuWorld").textContent = data.name;
+  const footerWorld = $("#footerWorldName");
+  if (footerWorld) footerWorld.textContent = data.name;
   $("#progressTotal").textContent = String(data.services.length).padStart(2, "0");
 
   $("#servicesTrack").innerHTML = data.services.map((service, index) => `
@@ -315,7 +585,7 @@ function renderExperience(world) {
     <figure class="catalog-card"><div class="catalog-card-image" style="background-image:url('${item[2]}')"></div><figcaption>${item[0]}<small>${item[1]}</small></figcaption></figure>`).join("");
 
   $("#faqList").innerHTML = data.faqs.map((item, index) => `
-    <article class="faq-item${index === 0 ? " is-open" : ""}"><button class="faq-question" type="button"><span>${item[0]}</span><b>+</b></button><div class="faq-answer"${index === 0 ? " style=\"height:80px\"" : ""}><p>${item[1]}</p></div></article>`).join("");
+    <article class="faq-item${index === 0 ? " is-open" : ""}"><button class="faq-question" type="button"><span>${item[0]}</span><b>+</b></button><div class="faq-answer"><p>${item[1]}</p></div></article>`).join("");
   bindFaqs();
   renderReviews();
   const blogMarkup = data.blogs.map((blog, index) => `
@@ -442,21 +712,125 @@ function updateComparison(value) {
   divider.style.left = `${value}%`;
 }
 
+function showSubItemReferences(itemTitle, itemIndex) {
+  const refs = residentialSubReferences[itemTitle];
+  if (!refs) return;
+
+  const drawer = $("#detailReferencesDrawer");
+  const titleEl = $("#referencesDrawerTitle");
+  const subtitleEl = $("#referencesDrawerSubtitle");
+  const gridEl = $("#referencesGrid");
+
+  // Highlight active sub-service card
+  $$("#serviceDetailGrid .detail-item").forEach((card, idx) => {
+    card.classList.toggle("is-active", idx === itemIndex);
+  });
+
+  titleEl.innerHTML = `${itemTitle} &mdash; <i>04 Curated Concepts</i>`;
+  subtitleEl.textContent = `Visual spatial references, material selections, and execution details for ${itemTitle.toLowerCase()}.`;
+
+  gridEl.innerHTML = refs.map((ref, rIdx) => `
+    <article class="reference-card">
+      <div class="reference-card-media" style="background-image:url('${ref.image}')"></div>
+      <div class="reference-card-top">
+        <span class="reference-num">0${rIdx + 1}</span>
+        <span class="reference-tag-pill">${ref.tag}</span>
+      </div>
+      <div class="reference-card-bottom">
+        <h5>${editorialTitleMarkup(ref.title)}</h5>
+        <button class="reference-quote-btn quote-trigger" type="button" data-ref-title="${ref.title}" data-parent-title="${itemTitle}">Quote this concept <span>↗</span></button>
+      </div>
+    </article>
+  `).join("");
+
+  drawer.classList.add("is-open");
+  drawer.setAttribute("aria-hidden", "false");
+
+  // Re-bind quote triggers in drawer
+  $$("#referencesGrid .quote-trigger").forEach(button => {
+    button.addEventListener("click", openQuote);
+  });
+
+  if (window.gsap) {
+    gsap.fromTo("#referencesGrid .reference-card", 
+      { y: 24, autoAlpha: 0 }, 
+      { y: 0, autoAlpha: 1, duration: .5, ease: "power3.out", stagger: .07 }
+    );
+  }
+
+  window.setTimeout(() => {
+    drawer.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }, 100);
+}
+
+function closeSubItemReferences() {
+  const drawer = $("#detailReferencesDrawer");
+  if (!drawer) return;
+  drawer.classList.remove("is-open");
+  drawer.setAttribute("aria-hidden", "true");
+  $$("#serviceDetailGrid .detail-item").forEach(card => card.classList.remove("is-active"));
+}
+
 function showServiceDetail(data, serviceIndex) {
+  closeSubItemReferences();
+  $$("#servicesTrack .service-card").forEach((card, idx) => {
+    card.classList.toggle("is-active", idx === serviceIndex);
+  });
   const service = data.services[serviceIndex];
   const detail = $("#serviceDetail");
   $("#serviceDetailTitle").innerHTML = `${titleMarkup(service.title)}<br /><i>in full detail.</i>`;
   $("#serviceDetailIntro").textContent = `A closer look at ${service.title.toLowerCase()}. Every included layer is shown below with a visual reference for the conversation.`;
-  $("#serviceDetailGrid").innerHTML = service.items.map((item, itemIndex) => {
-    const imageIndex = (serviceIndex * 5 + itemIndex) % detailImagePool.length;
-    return `<article class="detail-item"><div class="detail-item-media"><div style="background-image:url('${detailImagePool[imageIndex]}')"></div><span>${String(itemIndex + 1).padStart(2, "0")}</span></div><h4>${item}</h4><small>${data.name} / scope layer</small><button class="detail-quote quote-trigger" type="button">Get free quote <span>↗</span></button></article>`;
+  const grid = $("#serviceDetailGrid");
+  grid.style.gridTemplateColumns = window.innerWidth > 800 ? `repeat(${service.items.length}, 1fr)` : "";
+  const activePool = data.name === "Residential" ? detailImagePool.slice(0, 12) : detailImagePool;
+  grid.innerHTML = service.items.map((item, itemIndex) => {
+    const imageIndex = (serviceIndex * 5 + itemIndex) % activePool.length;
+    const hasRefs = data.name === "Residential" && residentialSubReferences[item];
+    const itemImage = data.name === "Residential"
+      ? (residentialSubReferences[item] && residentialSubReferences[item][0] ? residentialSubReferences[item][0].image : activePool[imageIndex])
+      : (commercialSubImages[item] || activePool[imageIndex]);
+    return `
+      <article class="detail-item${hasRefs ? " has-references" : ""}" data-item-index="${itemIndex}" data-item-title="${item}">
+        <div class="detail-item-media" style="background-image:url('${itemImage}')"></div>
+        <div class="detail-item-top">
+          <span class="detail-item-num">${String(itemIndex + 1).padStart(2, "0")}</span>
+          <span class="detail-item-scope">${data.name} / Scope</span>
+        </div>
+        <div class="detail-item-bottom">
+          <h4>${editorialTitleMarkup(item)}</h4>
+          <div class="detail-actions-row">
+            <button class="detail-quote quote-trigger" type="button">Get free quote <span>↗</span></button>
+            ${hasRefs ? `<button class="detail-inspect-btn" type="button"><span>View 4 concepts</span> <b>↓</b></button>` : ""}
+          </div>
+        </div>
+      </article>`;
   }).join("");
   detail.classList.add("is-visible");
   detail.setAttribute("aria-hidden", "false");
   if (window.gsap) {
     gsap.fromTo("#serviceDetail .service-detail-top, #serviceDetail .service-detail-intro, #serviceDetail .detail-item", { y: 24, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .65, ease: "power3.out", stagger: .06 });
   }
-  $$("#serviceDetail .detail-quote").forEach(button => button.addEventListener("click", openQuote));
+
+  // Quote triggers on detail items
+  $$("#serviceDetail .detail-quote").forEach(button => {
+    button.addEventListener("click", event => {
+      event.stopPropagation();
+      openQuote();
+    });
+  });
+
+  // If residential, clicking card or inspect button reveals 4 references
+  if (data.name === "Residential") {
+    $$("#serviceDetailGrid .detail-item.has-references").forEach(card => {
+      card.addEventListener("click", event => {
+        if (event.target.closest(".detail-quote")) return;
+        const itemTitle = card.dataset.itemTitle;
+        const itemIdx = Number(card.dataset.itemIndex);
+        showSubItemReferences(itemTitle, itemIdx);
+      });
+    });
+  }
+
   window.setTimeout(() => detail.scrollIntoView({ behavior: "smooth", block: "start" }), 80);
   if (window.ScrollTrigger) window.setTimeout(() => ScrollTrigger.refresh(), 500);
 }
@@ -470,6 +844,8 @@ function bindServiceCards(data) {
 }
 
 function closeServiceDetail() {
+  closeSubItemReferences();
+  $$("#servicesTrack .service-card").forEach(card => card.classList.remove("is-active"));
   const detail = $("#serviceDetail");
   detail.classList.remove("is-visible");
   detail.setAttribute("aria-hidden", "true");
@@ -485,7 +861,11 @@ function bindFaqs() {
     });
   });
   const initial = $(".faq-item.is-open");
-  if (initial) $(".faq-answer", initial).style.height = `${$(".faq-answer p", initial).offsetHeight + 25}px`;
+  if (initial) {
+    const ans = $(".faq-answer", initial);
+    const p = $(".faq-answer p", initial);
+    ans.style.height = p && p.offsetHeight > 0 ? `${p.offsetHeight}px` : "auto";
+  }
 }
 
 function openMenu() {
@@ -541,14 +921,16 @@ function initMotion() {
   if (!window.gsap) { motionReady = true; return; }
   motionReady = true;
   if (window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
-  gsap.killTweensOf(".hero-image, .hero-content, .section-index, .intro-layout, .service-card, .process-item, .catalog-card");
+  gsap.killTweensOf(".hero-image, .hero-content, .section-index, .intro-topbar, .intro-layout, .intro-pillar, .service-card, .process-item, .catalog-card");
   if (window.ScrollTrigger) ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+  gsap.set(".intro-topbar, .intro-layout, .intro-pillar, .process-item, .catalog-card, .blog-card", { clearProps: "opacity,visibility,transform" });
   const heroImage = $("#heroVideo");
   gsap.fromTo(heroImage, { scale: 1.14 }, { scale: 1.04, duration: 1.8, ease: "power3.out" });
   gsap.fromTo(".hero-content > *", { y: 35, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .9, ease: "power3.out", stagger: .1, delay: .2 });
   if (window.ScrollTrigger) {
     gsap.to(heroImage, { yPercent: 14, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
-    gsap.utils.toArray(".intro-layout, .story-heading, .process-header, .catalog-heading, .faq-layout, .insights-heading").forEach(element => gsap.from(element, { y: 45, autoAlpha: 0, duration: 1, ease: "power3.out", scrollTrigger: { trigger: element, start: "top 82%" } }));
+    gsap.utils.toArray(".intro-topbar, .intro-layout, .story-heading, .process-header, .catalog-heading, .faq-layout, .insights-heading").forEach(element => gsap.from(element, { y: 45, autoAlpha: 0, duration: 1, ease: "power3.out", scrollTrigger: { trigger: element, start: "top 82%" } }));
+    gsap.utils.toArray(".intro-pillar").forEach((element, idx) => gsap.from(element, { y: 25, autoAlpha: 0, duration: .7, delay: idx * .08, ease: "power3.out", scrollTrigger: { trigger: element, start: "top 90%" } }));
     gsap.utils.toArray(".process-item, .catalog-card, .blog-card").forEach(element => gsap.from(element, { y: 30, autoAlpha: 0, duration: .7, ease: "power3.out", scrollTrigger: { trigger: element, start: "top 88%" } }));
     gsap.utils.toArray(".process-item").forEach(element => {
       const visual = $(".process-visual", element);
@@ -584,11 +966,15 @@ function initMagnetic() {
 document.addEventListener("DOMContentLoaded", () => {
   $$(".world-option").forEach(option => option.addEventListener("click", () => chooseWorld(option.dataset.world)));
   $("#switchWorld").addEventListener("click", switchWorld);
+  const footerSwitch = $("#footerSwitchWorld");
+  if (footerSwitch) footerSwitch.addEventListener("click", switchWorld);
   $("#menuOpen").addEventListener("click", openMenu);
   $("#menuClose").addEventListener("click", closeMenu);
   $("#quoteClose").addEventListener("click", closeQuote);
   $("#articleClose").addEventListener("click", () => closeArticle());
   $("#serviceDetailClose").addEventListener("click", closeServiceDetail);
+  const refCloseBtn = $("#referencesCloseBtn");
+  if (refCloseBtn) refCloseBtn.addEventListener("click", closeSubItemReferences);
   $$(".quote-trigger").forEach(button => button.addEventListener("click", openQuote));
   $(".comparison-range").addEventListener("input", event => updateComparison(event.target.value));
   $("#quoteForm").addEventListener("submit", event => { event.preventDefault(); $("#formSuccess").classList.add("is-visible"); event.target.reset(); });
