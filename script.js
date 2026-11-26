@@ -748,7 +748,12 @@ function showSubItemReferences(itemTitle, itemIndex) {
 
   // Re-bind quote triggers in drawer
   $$("#referencesGrid .quote-trigger").forEach(button => {
-    button.addEventListener("click", openQuote);
+    button.addEventListener("click", () => openQuote({
+      world: activeWorld === "commercial" ? "Commercial & Civil" : "Residential",
+      service: activeServiceTitle || itemTitle,
+      subService: button.dataset.parentTitle || itemTitle,
+      concept: button.dataset.refTitle || ""
+    }));
   });
 
   if (window.gsap) {
@@ -771,12 +776,16 @@ function closeSubItemReferences() {
   $$("#serviceDetailGrid .detail-item").forEach(card => card.classList.remove("is-active"));
 }
 
+let activeServiceTitle = "";
+let activeQuoteContext = null;
+
 function showServiceDetail(data, serviceIndex) {
   closeSubItemReferences();
   $$("#servicesTrack .service-card").forEach((card, idx) => {
     card.classList.toggle("is-active", idx === serviceIndex);
   });
   const service = data.services[serviceIndex];
+  activeServiceTitle = service.title;
   const detail = $("#serviceDetail");
   $("#serviceDetailTitle").innerHTML = `${titleMarkup(service.title)}<br /><i>in full detail.</i>`;
   $("#serviceDetailIntro").textContent = `A closer look at ${service.title.toLowerCase()}. Every included layer is shown below with a visual reference for the conversation.`;
@@ -815,7 +824,13 @@ function showServiceDetail(data, serviceIndex) {
   $$("#serviceDetail .detail-quote").forEach(button => {
     button.addEventListener("click", event => {
       event.stopPropagation();
-      openQuote();
+      const card = button.closest(".detail-item");
+      openQuote({
+        world: data.name,
+        service: service.title,
+        subService: card ? card.dataset.itemTitle : "",
+        concept: ""
+      });
     });
   });
 
@@ -895,9 +910,26 @@ function closeMenu(immediate = false) {
   } else { overlay.classList.remove("is-open"); overlay.setAttribute("aria-hidden", "true"); document.body.classList.remove("is-locked"); }
 }
 
-function openQuote() {
+function openQuote(context = null) {
   closeMenu(true);
   closeArticle(true);
+  const worldName = activeWorld === "commercial" ? "Commercial & Civil" : "Residential";
+  activeQuoteContext = context && typeof context === "object" && !(context instanceof Event)
+    ? context
+    : { world: worldName, service: "General Enquiry", subService: "", concept: "" };
+
+  const badge = $("#quoteContextBadge");
+  if (badge) {
+    const parts = [activeQuoteContext.world, activeQuoteContext.service, activeQuoteContext.subService, activeQuoteContext.concept].filter(Boolean);
+    if (parts.length > 1) {
+      badge.textContent = `Brief: ${parts.join(" • ")}`;
+      badge.classList.add("is-visible");
+    } else {
+      badge.textContent = "";
+      badge.classList.remove("is-visible");
+    }
+  }
+
   const overlay = $("#quoteOverlay");
   overlay.classList.add("is-open");
   overlay.setAttribute("aria-hidden", "false");
@@ -907,6 +939,61 @@ function openQuote() {
     gsap.set(".quote-form-wrap > div, .quote-form label, .quote-form .solid-button", { y: 28, autoAlpha: 0 });
     gsap.timeline().fromTo(".quote-backdrop", { autoAlpha: 0 }, { autoAlpha: 1, duration: .35 }).to(".quote-form-wrap > div, .quote-form label, .quote-form .solid-button", { y: 0, autoAlpha: 1, duration: .7, ease: "power3.out", stagger: .05 }, "-=.1");
   }
+}
+
+function captureWebsiteLead(form) {
+  const fd = new FormData(form);
+  const ctx = activeQuoteContext || {
+    world: activeWorld === "commercial" ? "Commercial & Civil" : "Residential",
+    service: "General Enquiry",
+    subService: "",
+    concept: ""
+  };
+  const now = new Date();
+  const lead = {
+    id: `LD-${Date.now().toString(36).toUpperCase()}`,
+    createdAt: now.toISOString(),
+    name: String(fd.get("name") || "").trim(),
+    contact: String(fd.get("contact") || "").trim(),
+    email: String(fd.get("email") || "").trim(),
+    city: String(fd.get("city") || "").trim() || "Navi Mumbai",
+    message: String(fd.get("message") || "").trim(),
+    world: ctx.world || "Residential",
+    service: ctx.service || "General Enquiry",
+    subService: ctx.subService || "",
+    concept: ctx.concept || "",
+    status: "New",
+    priority: "Warm",
+    estimatedValue: 0,
+    followUpAt: "",
+    assignedTo: "Salim Ahmed",
+    source: "Website Quote Form",
+    notes: []
+  };
+
+  try {
+    const raw = localStorage.getItem("shinex_crm_v1");
+    const db = raw ? JSON.parse(raw) : { leads: [], schedule: [], projects: [] };
+    if (!Array.isArray(db.leads)) db.leads = [];
+    db.leads.unshift(lead);
+    localStorage.setItem("shinex_crm_v1", JSON.stringify(db));
+  } catch (e) {}
+
+  try {
+    const syncRaw = localStorage.getItem("shinex_crm_sync");
+    const sync = syncRaw ? JSON.parse(syncRaw) : null;
+    const configUrl = window.SHINEX_CRM_CONFIG && window.SHINEX_CRM_CONFIG.WEBHOOK_URL;
+    const webhookUrl = (sync && sync.webhookUrl) || configUrl || "";
+    if (webhookUrl) {
+      fetch(webhookUrl, {
+        method: "POST",
+        mode: "no-cors",
+        keepalive: true,
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ type: "new_lead", lead })
+      }).catch(() => {});
+    }
+  } catch (e) {}
 }
 
 function closeQuote() {
@@ -975,9 +1062,14 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#serviceDetailClose").addEventListener("click", closeServiceDetail);
   const refCloseBtn = $("#referencesCloseBtn");
   if (refCloseBtn) refCloseBtn.addEventListener("click", closeSubItemReferences);
-  $$(".quote-trigger").forEach(button => button.addEventListener("click", openQuote));
+  $$(".quote-trigger").forEach(button => button.addEventListener("click", () => openQuote()));
   $(".comparison-range").addEventListener("input", event => updateComparison(event.target.value));
-  $("#quoteForm").addEventListener("submit", event => { event.preventDefault(); $("#formSuccess").classList.add("is-visible"); event.target.reset(); });
+  $("#quoteForm").addEventListener("submit", event => {
+    event.preventDefault();
+    captureWebsiteLead(event.target);
+    $("#formSuccess").classList.add("is-visible");
+    event.target.reset();
+  });
   $$(".menu-link").forEach(link => link.addEventListener("click", closeMenu));
   document.addEventListener("keydown", event => { if (event.key === "Escape") { closeMenu(); closeQuote(); closeArticle(); closeServiceDetail(); } });
   initCursor();
