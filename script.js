@@ -1039,8 +1039,8 @@ function openQuote(context = null) {
   document.body.classList.add("is-locked");
   $("#formSuccess").classList.remove("is-visible");
   if (window.gsap) {
-    gsap.set(".quote-form-wrap > div, .quote-form label, .quote-form .solid-button", { y: 28, autoAlpha: 0 });
-    gsap.timeline().fromTo(".quote-backdrop", { autoAlpha: 0 }, { autoAlpha: 1, duration: .35 }).to(".quote-form-wrap > div, .quote-form label, .quote-form .solid-button", { y: 0, autoAlpha: 1, duration: .7, ease: "power3.out", stagger: .05 }, "-=.1");
+    gsap.set(".quote-form-wrap > div, .quote-form label, .quote-form .solid-button, .quote-form .quote-whatsapp-btn", { y: 28, autoAlpha: 0 });
+    gsap.timeline().fromTo(".quote-backdrop", { autoAlpha: 0 }, { autoAlpha: 1, duration: .35 }).to(".quote-form-wrap > div, .quote-form label, .quote-form .solid-button, .quote-form .quote-whatsapp-btn", { y: 0, autoAlpha: 1, duration: .7, ease: "power3.out", stagger: .05 }, "-=.1");
   }
 }
 
@@ -1102,7 +1102,7 @@ function captureWebsiteLead(form) {
 function closeQuote() {
   const overlay = $("#quoteOverlay");
   if (!overlay.classList.contains("is-open")) return;
-  if (window.gsap) gsap.to(".quote-form-wrap > div, .quote-form label, .quote-form .solid-button", { y: -18, autoAlpha: 0, duration: .3, stagger: .02, onComplete: finish });
+  if (window.gsap) gsap.to(".quote-form-wrap > div, .quote-form label, .quote-form .solid-button, .quote-form .quote-whatsapp-btn", { y: -18, autoAlpha: 0, duration: .3, stagger: .02, onComplete: finish });
   else finish();
   function finish() { overlay.classList.remove("is-open"); overlay.setAttribute("aria-hidden", "true"); document.body.classList.remove("is-locked"); }
 }
