@@ -271,22 +271,31 @@ const experienceData = {
     name: "Residential",
     header: "RESIDENTIAL / 01",
     heroTitle: "Built around<br /><i>the way you live.</i>",
-    heroDescription: "Navi Mumbai’s most trusted turnkey home interior studio — backed by Sneha Enterprises’ Class-1 execution legacy since 2011. From 1BHK homes to luxury villas, delivered on time with zero hidden surprises.",
+    heroDescription: "Navi Mumbai’s most trusted ready-to-move-in home interior studio — backed by Sneha Enterprises’ Class-1 execution legacy since 2011. From 1BHK homes to luxury villas, delivered on time with zero hidden surprises.",
     heroImage: "assets/residential-montage-poster.jpg",
     heroVideo: "assets/residential-montage.mp4",
     heroVideoMobile: "assets/residential-montage-mobile.mp4",
     heroImageMobile: "assets/residential-montage-mobile-poster.jpg",
     introTitle: "Good spaces do<br />more than <i>look good.</i>",
     introCopy: "They hold the morning rush, the quiet pause, the people who gather, and the years that follow. We bring design and execution into one considered conversation.",
-    pillars: [
-      { title: "Human Rhythm", desc: "Calibrated around daily rituals, natural sunlight, and quiet spatial ease." },
-      { title: "Unified Execution", desc: "Design studio and Class-1 civil engineering under one roof. Zero handoff friction." },
-      { title: "Enduring Materiality", desc: "Honest stone, genuine architectural timber, and craft built to outlast trends." }
-    ],
     servicesNote: "A full-spectrum residential studio for homes with a point of view.",
-    comparisonName: "A home with a new rhythm",
-    beforeImage: "https://vipulrane1212-lgtm.github.io/shinex-interior/images/transformations/seawoods_before.jpg",
-    afterImage: "https://vipulrane1212-lgtm.github.io/shinex-interior/images/transformations/seawoods_after.jpg",
+    comparisons: [
+      {
+        name: "A home with a new rhythm",
+        beforeImage: "https://vipulrane1212-lgtm.github.io/shinex-interior/images/transformations/seawoods_before.jpg",
+        afterImage: "https://vipulrane1212-lgtm.github.io/shinex-interior/images/transformations/seawoods_after.jpg"
+      },
+      {
+        name: "Modular L-shaped kitchen transformation",
+        beforeImage: "assets/transformations/res-kitchen-before.jpg",
+        afterImage: "assets/transformations/res-kitchen-after.jpg"
+      },
+      {
+        name: "Master bedroom suite & sliding wardrobe",
+        beforeImage: "assets/transformations/res-bedroom-before.jpg",
+        afterImage: "assets/transformations/res-bedroom-after.jpg"
+      }
+    ],
     closingImage: image("photo-1600607687920-4e2a09cf159d"),
     closingTitle: "Your space<br />starts <i>now.</i>",
     catalogCopy: "Stone, timber, light and lived-in softness — a quiet material language, tailored to the way your home should feel.",
@@ -368,16 +377,16 @@ const experienceData = {
       ["Handover", "The last light, the final clean and a space ready for the life you pictured. We stay close after move-in.", "01 — 02 weeks"]
     ],
     faqs: [
-      ["Can you take on a complete turnkey home?", "Yes. We can carry a project from design and drawings through civil work, interiors, furniture, lighting and final handover — with one accountable team."],
+      ["Can you take on a complete ready-to-move-in home?", "Yes. We can carry a project from design and drawings through civil work, interiors, furniture, lighting and final handover — with one accountable team."],
       ["Do you work with existing architects?", "Absolutely. We regularly partner with architects and can take responsibility for interiors, civil execution, MEP and site coordination as a single package."],
       ["How early should we involve ShineX?", "The earlier the better. Bringing us in during planning helps align design ambition, practical buildability and the real project budget before work begins."],
       ["Which cities do you work in?", "Our core execution team is based in India and we take on projects based on scope, site readiness and the level of involvement the brief requires."],
       ["How do I start?", "Send a few details through the quote form or WhatsApp. We will schedule a short discovery call and tell you what the next useful step is."]
     ],
-    insightsCopy: "Practical guidance for homeowners planning interiors, renovations and turnkey construction — without losing the feeling behind the brief.",
+    insightsCopy: "Practical guidance for homeowners planning interiors, renovations and ready-to-move-in construction — without losing the feeling behind the brief.",
     blogs: [
       ["Complete Home Interior Design for 1BHK, 2BHK, 3BHK and 4BHK Homes", "RESIDENTIAL INTERIORS", "A practical guide to planning a complete home interior, from space planning and storage to lighting, materials and final styling.", "8 min read", image("photo-1600607687939-ce8a6c25118c")],
-      ["How to Plan a Turnkey House Construction Project", "TURNKEY CONSTRUCTION", "The key decisions to make before construction begins — drawings, approvals, structure, services, finishes, budget and handover.", "9 min read", image("photo-1503387762-592deb58ef4e")],
+      ["How to Plan a Ready-to-Move-In House Construction Project", "READY-TO-MOVE-IN CONSTRUCTION", "The key decisions to make before construction begins — drawings, approvals, structure, services, finishes, budget and handover.", "9 min read", image("photo-1503387762-592deb58ef4e")],
       ["Modular Kitchen Design Ideas for Indian Homes", "KITCHEN DESIGN", "Explore practical kitchen layouts, cabinet finishes, work triangles, storage planning and countertop choices for everyday Indian cooking.", "7 min read", image("photo-1556912173-46c336c7fd55")],
       ["Luxury Villa Interior Design That Still Feels Like Home", "VILLA DESIGN", "How to balance scale, stone, natural light, furniture and personal detail in a villa or bungalow interior without over-designing it.", "8 min read", image("photo-1600607687920-4e2a09cf159d")],
       ["Flat Renovation Checklist: What to Fix Before You Redesign", "HOME RENOVATION", "A room-by-room checklist for old flats, including demolition, plumbing, electrical rewiring, seepage repair, flooring and paint.", "6 min read", image("photo-1617104678098-de229db51175")],
@@ -396,15 +405,24 @@ const experienceData = {
     heroImageMobile: "assets/commercial-montage-mobile-poster.jpg",
     introTitle: "The best workspaces<br />make work <i>flow.</i>",
     introCopy: "We create commercial environments that carry a brand, support a team and survive real use. Strategy, build and technical delivery — held under one roof.",
-    pillars: [
-      { title: "Work Flow", desc: "Spatial acoustics, team collaboration zones, and focus-first agile layouts." },
-      { title: "Turnkey Delivery", desc: "Civil contracting, MEP systems, and fit-outs delivered on strict handover schedules." },
-      { title: "Brand Presence", desc: "Physical environments engineered to project corporate identity and survive heavy use." }
-    ],
     servicesNote: "A single execution partner for commercial fit-outs, civil contracting and the systems behind them.",
-    comparisonName: "From bare shell to business ready",
-    beforeImage: "https://vipulrane1212-lgtm.github.io/shinex-interior/images/transformations/commercial_office_before.jpg",
-    afterImage: "https://vipulrane1212-lgtm.github.io/shinex-interior/images/transformations/commercial_office_after.jpg",
+    comparisons: [
+      {
+        name: "From bare shell to business ready",
+        beforeImage: "https://vipulrane1212-lgtm.github.io/shinex-interior/images/transformations/commercial_office_before.jpg",
+        afterImage: "https://vipulrane1212-lgtm.github.io/shinex-interior/images/transformations/commercial_office_after.jpg"
+      },
+      {
+        name: "Executive boardroom & acoustic glass cabins",
+        beforeImage: "assets/transformations/com-boardroom-before.jpg",
+        afterImage: "assets/transformations/com-boardroom-after.jpg"
+      },
+      {
+        name: "Corporate reception & open workstation bay",
+        beforeImage: "assets/transformations/com-reception-before.jpg",
+        afterImage: "assets/transformations/com-reception-after.jpg"
+      }
+    ],
     closingImage: image("photo-1497366754035-f200968a6e72"),
     closingTitle: "Make room<br />for <i>what’s next.</i>",
     catalogCopy: "Durable systems, clear wayfinding and a material language that keeps the brand in focus — built for everyday performance.",
@@ -480,6 +498,10 @@ const experienceData = {
 
 let activeWorld = null;
 let motionReady = false;
+let activeComparisonIndex = 0;
+let comparisonObserver = null;
+let comparisonHasEntered = false;
+let comparisonLeftAfterEnter = false;
 const $ = (selector, parent = document) => parent.querySelector(selector);
 const $$ = (selector, parent = document) => Array.from(parent.querySelectorAll(selector));
 
@@ -546,18 +568,13 @@ function renderExperience(world) {
   }
   $("#introTitle").innerHTML = data.introTitle;
   $("#introCopy").textContent = data.introCopy;
-  if (data.pillars) {
-    data.pillars.forEach((pillar, i) => {
-      const titleEl = $(`#pillar${i + 1}Title`);
-      const descEl = $(`#pillar${i + 1}Desc`);
-      if (titleEl) titleEl.textContent = pillar.title;
-      if (descEl) descEl.textContent = pillar.desc;
-    });
-  }
   $("#servicesNote").textContent = data.servicesNote;
-  $("#comparisonName").textContent = data.comparisonName;
-  $("#comparisonBefore").style.backgroundImage = `linear-gradient(90deg, rgba(0,0,0,.1), rgba(255,255,255,.12)), url("${data.beforeImage}")`;
-  $("#comparisonAfter").style.backgroundImage = `linear-gradient(90deg, rgba(0,0,0,.05), rgba(0,0,0,.15)), url("${data.afterImage}")`;
+  preloadComparisonPairs(data.comparisons || []);
+  activeComparisonIndex = 0;
+  comparisonHasEntered = false;
+  comparisonLeftAfterEnter = false;
+  if (comparisonObserver) { comparisonObserver.disconnect(); comparisonObserver = null; }
+  showComparisonPair(0, { animate: false });
   $("#closingImage").style.backgroundImage = `url("${data.closingImage}")`;
   $("#closingTitle").innerHTML = data.closingTitle;
   $("#catalogCopy").textContent = data.catalogCopy;
@@ -660,6 +677,7 @@ function chooseWorld(world) {
   if (backdrop && cardVideo && window.gsap && !reduceMotion) {
     // Shared-element zoom: the picked card's own video expands to fill the screen,
     // then hands over to the same video playing as the world hero background.
+    cardVideo.play().catch(() => {});
     document.body.classList.add("is-zooming");
     picker.classList.add("is-zooming");
     option.classList.add("is-chosen");
@@ -695,6 +713,8 @@ function chooseWorld(world) {
 function switchWorld() {
   const picker = $("#worldPicker");
   const shell = $("#siteShell");
+  if (comparisonObserver) { comparisonObserver.disconnect(); comparisonObserver = null; }
+  $$(".world-option video").forEach(v => { v.pause(); v.currentTime = 0; v.load(); });
   picker.style.display = "flex";
   if (window.gsap) gsap.fromTo(picker, { autoAlpha: 0 }, { autoAlpha: 1, duration: .55, ease: "power2.out" });
   else picker.style.opacity = "1";
@@ -703,13 +723,96 @@ function switchWorld() {
   window.scrollTo(0, 0);
 }
 
+function preloadComparisonPairs(pairs) {
+  pairs.forEach(pair => {
+    [pair.beforeImage, pair.afterImage].forEach(src => {
+      if (!src) return;
+      const img = new Image();
+      img.src = src;
+    });
+  });
+}
+
+function showComparisonPair(index, { animate = true } = {}) {
+  const data = experienceData[activeWorld];
+  const pairs = (data && data.comparisons) || [];
+  if (!pairs.length) return;
+  const safeIdx = ((index % pairs.length) + pairs.length) % pairs.length;
+  const pair = pairs[safeIdx];
+  const before = $("#comparisonBefore");
+  const after = $("#comparisonAfter");
+  const beforePrev = $("#comparisonBeforePrev");
+  const afterPrev = $("#comparisonAfterPrev");
+  const countEl = $("#comparisonCount");
+  const nameEl = $("#comparisonName");
+  const nextBeforeBg = `linear-gradient(90deg, rgba(0,0,0,.1), rgba(255,255,255,.12)), url("${pair.beforeImage}")`;
+  const nextAfterBg = `linear-gradient(90deg, rgba(0,0,0,.05), rgba(0,0,0,.15)), url("${pair.afterImage}")`;
+
+  if (countEl) countEl.textContent = `${String(safeIdx + 1).padStart(2, "0")} / ${String(pairs.length).padStart(2, "0")}`;
+  if (nameEl) nameEl.textContent = pair.name;
+
+  if (animate && before && after && beforePrev && afterPrev) {
+    beforePrev.style.backgroundImage = before.style.backgroundImage || nextBeforeBg;
+    afterPrev.style.backgroundImage = after.style.backgroundImage || nextAfterBg;
+    before.classList.add("is-fading");
+    after.classList.add("is-fading");
+    before.style.backgroundImage = nextBeforeBg;
+    after.style.backgroundImage = nextAfterBg;
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      before.classList.remove("is-fading");
+      after.classList.remove("is-fading");
+    }));
+  } else {
+    if (before) before.style.backgroundImage = nextBeforeBg;
+    if (after) after.style.backgroundImage = nextAfterBg;
+    if (beforePrev) beforePrev.style.backgroundImage = nextBeforeBg;
+    if (afterPrev) afterPrev.style.backgroundImage = nextAfterBg;
+  }
+}
+
+function initComparisonObserver() {
+  const section = $("#beforeAfter");
+  if (!section || !window.IntersectionObserver) return;
+  if (comparisonObserver) comparisonObserver.disconnect();
+  comparisonHasEntered = false;
+  comparisonLeftAfterEnter = false;
+  comparisonObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (!comparisonHasEntered) {
+          comparisonHasEntered = true;
+          comparisonLeftAfterEnter = false;
+        } else if (comparisonLeftAfterEnter) {
+          comparisonLeftAfterEnter = false;
+          const pairs = (experienceData[activeWorld] && experienceData[activeWorld].comparisons) || [];
+          if (pairs.length > 1) {
+            activeComparisonIndex = (activeComparisonIndex + 1) % pairs.length;
+            showComparisonPair(activeComparisonIndex, { animate: true });
+          }
+        }
+      } else if (comparisonHasEntered) {
+        comparisonLeftAfterEnter = true;
+      }
+    });
+  }, { threshold: 0.12 });
+  comparisonObserver.observe(section);
+}
+
 function updateComparison(value) {
   const before = $("#comparisonBefore");
+  const beforePrev = $("#comparisonBeforePrev");
   const divider = $(".comparison-divider");
+  const range = $(".comparison-range");
   if (!before || !divider) return;
+  const clip = `inset(0 ${100 - Number(value)}% 0 0)`;
   before.style.width = "100%";
-  before.style.clipPath = `inset(0 ${100 - Number(value)}% 0 0)`;
+  before.style.clipPath = clip;
+  if (beforePrev) {
+    beforePrev.style.width = "100%";
+    beforePrev.style.clipPath = clip;
+  }
   divider.style.left = `${value}%`;
+  if (range && Number(range.value) !== Number(value)) range.value = String(value);
 }
 
 function showSubItemReferences(itemTitle, itemIndex) {
@@ -1008,16 +1111,15 @@ function initMotion() {
   if (!window.gsap) { motionReady = true; return; }
   motionReady = true;
   if (window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
-  gsap.killTweensOf(".hero-image, .hero-content, .section-index, .intro-topbar, .intro-layout, .intro-pillar, .service-card, .process-item, .catalog-card");
+  gsap.killTweensOf(".hero-image, .hero-content, .section-index, .intro-topbar, .intro-layout, .service-card, .process-item, .catalog-card");
   if (window.ScrollTrigger) ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-  gsap.set(".intro-topbar, .intro-layout, .intro-pillar, .process-item, .catalog-card, .blog-card", { clearProps: "opacity,visibility,transform" });
+  gsap.set(".intro-topbar, .intro-layout, .process-item, .catalog-card, .blog-card", { clearProps: "opacity,visibility,transform" });
   const heroImage = $("#heroVideo");
   gsap.fromTo(heroImage, { scale: 1.14 }, { scale: 1.04, duration: 1.8, ease: "power3.out" });
   gsap.fromTo(".hero-content > *", { y: 35, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .9, ease: "power3.out", stagger: .1, delay: .2 });
   if (window.ScrollTrigger) {
     gsap.to(heroImage, { yPercent: 14, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
     gsap.utils.toArray(".intro-topbar, .intro-layout, .story-heading, .process-header, .catalog-heading, .faq-layout, .insights-heading").forEach(element => gsap.from(element, { y: 45, autoAlpha: 0, duration: 1, ease: "power3.out", scrollTrigger: { trigger: element, start: "top 82%" } }));
-    gsap.utils.toArray(".intro-pillar").forEach((element, idx) => gsap.from(element, { y: 25, autoAlpha: 0, duration: .7, delay: idx * .08, ease: "power3.out", scrollTrigger: { trigger: element, start: "top 90%" } }));
     gsap.utils.toArray(".process-item, .catalog-card, .blog-card").forEach(element => gsap.from(element, { y: 30, autoAlpha: 0, duration: .7, ease: "power3.out", scrollTrigger: { trigger: element, start: "top 88%" } }));
     gsap.utils.toArray(".process-item").forEach(element => {
       const visual = $(".process-visual", element);
@@ -1029,6 +1131,7 @@ function initMotion() {
     gsap.to(track, { x: () => -distance(), ease: "none", scrollTrigger: { trigger: ".services-section", start: "top top", end: () => `+=${Math.max(700, distance())}`, pin: true, scrub: 1, invalidateOnRefresh: true, onUpdate: self => { $("#progressBar").style.width = `${Math.max(12, self.progress * 100)}%`; } } });
   }
   if (window.ScrollTrigger) ScrollTrigger.refresh();
+  initComparisonObserver();
 }
 
 function initCursor() {
@@ -1050,7 +1153,27 @@ function initMagnetic() {
   });
 }
 
+function initPickerHoverVideos() {
+  const canHover = window.matchMedia("(hover: hover) and (pointer: fine)");
+  $$(".world-option").forEach(option => {
+    const video = option.querySelector(".option-backdrop video");
+    if (!video) return;
+    video.pause();
+    option.addEventListener("pointerenter", event => {
+      if (event.pointerType !== "mouse" || !canHover.matches) return;
+      video.play().catch(() => {});
+    });
+    option.addEventListener("pointerleave", event => {
+      if (event.pointerType !== "mouse") return;
+      video.pause();
+      video.currentTime = 0;
+      video.load();
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  initPickerHoverVideos();
   $$(".world-option").forEach(option => option.addEventListener("click", () => chooseWorld(option.dataset.world)));
   $("#switchWorld").addEventListener("click", switchWorld);
   const footerSwitch = $("#footerSwitchWorld");

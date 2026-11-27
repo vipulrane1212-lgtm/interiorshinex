@@ -8,8 +8,8 @@
   <title>ShineX — Navi Mumbai Interior Design &amp; Class-1 Civil Execution</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=9" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=12" />
 </head>
 <body>
   <div class="cursor-dot" aria-hidden="true"></div>
@@ -18,9 +18,9 @@
   <div class="world-picker" id="worldPicker" aria-label="Choose an experience">
     <div class="picker-noise"></div>
     <header class="picker-header">
-      <a class="brand brand--light" href="#" aria-label="ShineX home">
+      <a class="brand brand--light" href="#" aria-label="ShineX Infra home">
         <span class="brand-mark">SX</span>
-        <span class="brand-copy">ShineX <em>Infra Solutions</em></span>
+        <span class="brand-copy"><span class="brand-main">ShineX</span><em class="brand-sub">Infra</em></span>
       </a>
       <span class="mono-label">EST. 2011 / INDIA</span>
     </header>
@@ -31,7 +31,7 @@
     </div>
     <div class="world-options">
       <button class="world-option world-option--residential" data-world="residential" type="button">
-        <span class="option-backdrop" aria-hidden="true"><video autoplay muted loop playsinline preload="auto" poster="assets/residential-montage-poster.jpg" disablepictureinpicture><source src="assets/residential-montage.mp4" type="video/mp4"></video></span>
+        <span class="option-backdrop" aria-hidden="true"><video muted loop playsinline preload="metadata" poster="assets/residential-montage-poster.jpg" disablepictureinpicture><source src="assets/residential-montage.mp4" type="video/mp4"></video></span>
         <span class="option-number">01</span>
         <span class="option-content">
           <span class="option-kicker">For the spaces you call home</span>
@@ -40,7 +40,7 @@
         </span>
       </button>
       <button class="world-option world-option--commercial" data-world="commercial" type="button">
-        <span class="option-backdrop" aria-hidden="true"><video autoplay muted loop playsinline preload="auto" poster="assets/commercial-montage-poster.jpg" disablepictureinpicture><source src="assets/commercial-montage.mp4" type="video/mp4"></video></span>
+        <span class="option-backdrop" aria-hidden="true"><video muted loop playsinline preload="metadata" poster="assets/commercial-montage-poster.jpg" disablepictureinpicture><source src="assets/commercial-montage.mp4" type="video/mp4"></video></span>
         <span class="option-number">02</span>
         <span class="option-content">
           <span class="option-kicker">For the places that move business</span>
@@ -58,9 +58,9 @@
 
   <div class="site-shell" id="siteShell" aria-hidden="true">
     <header class="site-header" id="siteHeader">
-      <a class="brand" href="#top" aria-label="ShineX top">
+      <a class="brand" href="#top" aria-label="ShineX Infra top">
         <span class="brand-mark">SX</span>
-        <span class="brand-copy">ShineX <em>Infra Solutions</em></span>
+        <span class="brand-copy"><span class="brand-main">ShineX</span><em class="brand-sub">Infra</em></span>
       </a>
       <div class="header-world"><span class="status-dot"></span><span id="headerWorld">RESIDENTIAL / 01</span></div>
       <div class="header-spacer" aria-hidden="true"></div>
@@ -78,7 +78,7 @@
         <div class="hero-content">
           
           <h2 id="heroTitle">Built around<br /><i>the way you live.</i></h2>
-          <p class="hero-description" id="heroDescription">Navi Mumbai’s most trusted turnkey home interior studio — backed by Sneha Enterprises’ Class-1 execution legacy since 2011. From 1BHK homes to luxury villas, delivered on time with zero hidden surprises.</p>
+          <p class="hero-description" id="heroDescription">Navi Mumbai’s most trusted ready-to-move-in home interior studio — backed by Sneha Enterprises’ Class-1 execution legacy since 2011. From 1BHK homes to luxury villas, delivered on time with zero hidden surprises.</p>
           <a class="circle-link magnetic" href="#services"><span>Explore<br />the work</span><b>↓</b></a>
         </div>
         <div class="hero-meta"><span>Scroll to discover <b>↓</b></span></div>
@@ -104,24 +104,6 @@
                 <span>See how we work</span>
                 <span class="intro-cta-arrow">↘</span>
               </a>
-            </div>
-          </div>
-
-          <div class="intro-pillars" id="introPillars">
-            <div class="intro-pillar">
-              <span class="pillar-num">01</span>
-              <h4 class="pillar-title" id="pillar1Title">Human Rhythm</h4>
-              <p class="pillar-desc" id="pillar1Desc">Calibrated around daily rituals, natural sunlight, and quiet spatial ease.</p>
-            </div>
-            <div class="intro-pillar">
-              <span class="pillar-num">02</span>
-              <h4 class="pillar-title" id="pillar2Title">Unified Execution</h4>
-              <p class="pillar-desc" id="pillar2Desc">Design studio and Class-1 civil engineering under one roof. Zero handoff friction.</p>
-            </div>
-            <div class="intro-pillar">
-              <span class="pillar-num">03</span>
-              <h4 class="pillar-title" id="pillar3Title">Enduring Materiality</h4>
-              <p class="pillar-desc" id="pillar3Desc">Honest stone, genuine architectural timber, and craft built to outlast trends.</p>
             </div>
           </div>
         </div>
@@ -173,14 +155,16 @@
           <p>Every project starts with what exists. We find the potential hiding in plain sight.</p>
         </div>
         <div class="comparison" data-comparison>
+          <div class="comparison-after comparison-layer--prev" id="comparisonAfterPrev" aria-hidden="true"></div>
           <div class="comparison-after" id="comparisonAfter"></div>
+          <div class="comparison-before comparison-layer--prev" id="comparisonBeforePrev" aria-hidden="true"></div>
           <div class="comparison-before" id="comparisonBefore"></div>
           <div class="comparison-divider"><span>Drag</span></div>
           <input class="comparison-range" type="range" min="5" max="95" value="54" aria-label="Compare before and after" />
           <div class="comparison-label comparison-label--before">Before</div>
           <div class="comparison-label comparison-label--after">After</div>
         </div>
-        <div class="comparison-caption"><span id="comparisonName">A home with a new rhythm</span><span>← Drag the line →</span></div>
+        <div class="comparison-caption"><span class="comparison-caption-title"><b id="comparisonCount">01 / 03</b> <span id="comparisonName">A home with a new rhythm</span></span><span>← Drag the line →</span></div>
       </section>
 
       <section class="process-section section-pad" id="process">
@@ -230,11 +214,11 @@
     <footer class="site-footer">
       <div class="footer-grid">
         <div class="footer-brand-col">
-          <a class="brand brand--light" href="#top" aria-label="ShineX top">
+          <a class="brand brand--light" href="#top" aria-label="ShineX Infra top">
             <span class="brand-mark">SX</span>
-            <span class="brand-copy">ShineX <em>Infra Solutions</em></span>
+            <span class="brand-copy"><span class="brand-main">ShineX</span><em class="brand-sub">Infra</em></span>
           </a>
-          <p class="footer-summary">Turnkey residential interiors, corporate office fit-outs &amp; Class-1 civil contracting across Navi Mumbai, Thane &amp; Mumbai.</p>
+          <p class="footer-summary">Ready-to-move-in residential interiors, corporate office fit-outs &amp; Class-1 civil contracting across Navi Mumbai, Thane &amp; Mumbai.</p>
           <span class="footer-legacy-pill">Parent Company: Sneha Enterprises &bull; Est. 2011</span>
         </div>
 
@@ -284,7 +268,7 @@
 
   <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
     <div class="menu-wash"></div><div class="menu-orbit orbit-one"></div><div class="menu-orbit orbit-two"></div>
-    <div class="menu-overlay-header"><a class="brand brand--light" href="#top"><span class="brand-mark">SX</span><span class="brand-copy">ShineX <em>Infra Solutions</em></span></a><button class="close-button" id="menuClose" type="button" aria-label="Close menu"><span>Close</span><b>×</b></button></div>
+    <div class="menu-overlay-header"><a class="brand brand--light" href="#top" aria-label="ShineX Infra top"><span class="brand-mark">SX</span><span class="brand-copy"><span class="brand-main">ShineX</span><em class="brand-sub">Infra</em></span></a><button class="close-button" id="menuClose" type="button" aria-label="Close menu"><span>Close</span><b>×</b></button></div>
     <nav class="mega-menu" aria-label="Main navigation"><span class="menu-kicker">Navigate / <span id="menuWorld">Residential</span></span><a href="#services" class="menu-link">The work <sup>01</sup></a><a href="#beforeAfter" class="menu-link">Transformations <sup>02</sup></a><a href="#process" class="menu-link">Our process <sup>03</sup></a><a href="#catalog" class="menu-link">Material catalog <sup>04</sup></a><a href="#reviews" class="menu-link">Reviews <sup>05</sup></a><a href="#faq" class="menu-link">FAQs <sup>06</sup></a><a href="#insights" class="menu-link">Journal <sup>07</sup></a><button class="menu-quote quote-trigger" type="button">Start a conversation <span>↗</span></button></nav>
     <div class="menu-footer"><span>Instagram ↗</span><span>WhatsApp ↗</span><span>hello@shinex.in</span></div>
   </div>
@@ -300,6 +284,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="crm-config.js?v=1"></script>
-  <script src="script.js?v=10"></script>
+  <script src="script.js?v=13"></script>
 </body>
 </html>
