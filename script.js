@@ -950,13 +950,8 @@ function showSubItemReferences(itemTitle, itemIndex) {
   gridEl.innerHTML = refs.map((ref, rIdx) => `
     <article class="reference-card">
       <div class="reference-card-media" style="background-image:url('${ref.image}')"></div>
-      <div class="reference-card-top">
-        <span class="reference-num">0${rIdx + 1}</span>
-        <span class="reference-tag-pill">${ref.tag}</span>
-      </div>
       <div class="reference-card-bottom">
-        <h5>${editorialTitleMarkup(ref.title)}</h5>
-        <button class="reference-quote-btn quote-trigger" type="button" data-ref-title="${ref.title}" data-parent-title="${itemTitle}">Quote this concept <span>↗</span></button>
+        <button class="reference-quote-btn quote-trigger" type="button" data-ref-title="Concept 0${rIdx + 1} — ${ref.title}" data-parent-title="${itemTitle}">Quote this concept <span>↗</span></button>
       </div>
     </article>
   `).join("");

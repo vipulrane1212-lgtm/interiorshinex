@@ -438,7 +438,7 @@ h1 i, h2 i, h3 i, .world-option strong i { font-family: Georgia, serif; font-wei
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 18px;
   overflow: hidden;
   background: #141414;
@@ -451,7 +451,7 @@ h1 i, h2 i, h3 i, .world-option strong i { font-family: Georgia, serif; font-wei
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(0deg, rgba(6,6,6,.95) 0%, rgba(6,6,6,.64) 46%, rgba(6,6,6,.08) 100%);
+  background: linear-gradient(0deg, rgba(6,6,6,.72) 0%, rgba(6,6,6,.18) 32%, transparent 65%);
   transition: background .4s var(--ease);
 }
 .reference-card:hover {
@@ -477,13 +477,13 @@ h1 i, h2 i, h3 i, .world-option strong i { font-family: Georgia, serif; font-wei
   inset: 0;
   background-size: cover;
   background-position: center;
-  filter: saturate(1.18) contrast(1.04);
-  opacity: .8;
+  filter: saturate(1.12) contrast(1.03);
+  opacity: .96;
   transition: transform 1s var(--ease), opacity .45s;
 }
 .reference-card:hover .reference-card-media {
-  transform: scale(1.08);
-  opacity: .94;
+  transform: scale(1.06);
+  opacity: 1;
 }
 .reference-card-top,
 .reference-card-bottom {
