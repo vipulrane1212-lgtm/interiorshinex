@@ -164,12 +164,15 @@ const residentialSubReferences = {
   ],
 
   // 05 / Luxury Villa & Bungalow Interior Design
-  "Double-height living room & grand entrance foyer design": [
-    { title: "20-Foot Feature Wall with Bookmatched Marble", tag: "Feature Wall", image: "assets/service-images/residential/065-20-foot-feature-wall-with-bookmatched-marble.jpg" },
-    { title: "Cascading Crystal Chandelier Installation", tag: "Chandelier", image: "assets/service-images/residential/066-cascading-crystal-chandelier-installation.png" },
-    { title: "Architectural Curved Staircase & Glass Railing", tag: "Curved Staircase", image: "assets/service-images/residential/067-architectural-curved-staircase-glass-railing.jpg" },
-    { title: "Solid Teak Double Pivot Grand Entrance Door", tag: "Pivot Door", image: "assets/service-images/residential/068-solid-teak-double-pivot-grand-entrance-door.jpg" }
-  ],
+  "Double-height living room & grand entrance foyer design": {
+    cover: "assets/service-images/residential/065-cover-double-height-living-room.png",
+    refs: [
+      { title: "20-Foot Feature Wall with Bookmatched Marble", tag: "Feature Wall", image: "assets/service-images/residential/065a-bookmatched-marble-feature-wall.jpg" },
+      { title: "Cascading Crystal Chandelier Installation", tag: "Chandelier", image: "assets/service-images/residential/066-cascading-crystal-chandelier-installation.png" },
+      { title: "Architectural Curved Staircase & Glass Railing", tag: "Curved Staircase", image: "assets/service-images/residential/067-architectural-curved-staircase-glass-railing.jpg" },
+      { title: "Solid Teak Double Pivot Grand Entrance Door", tag: "Pivot Door", image: "assets/service-images/residential/068-solid-teak-double-pivot-grand-entrance-door.jpg" }
+    ]
+  },
   "Custom marble, Italian stone & wooden flooring work": [
     { title: "High-Gloss Botticino Italian Marble Flooring", tag: "Italian Marble", image: "assets/service-images/residential/069-high-gloss-botticino-italian-marble-flooring.png" },
     { title: "Herringbone Hardwood Engineered Flooring", tag: "Herringbone Oak", image: "assets/service-images/residential/070-herringbone-hardwood-engineered-flooring.jpg" },
@@ -187,12 +190,6 @@ const residentialSubReferences = {
     { title: "Ultra-Clear Laminated Glass Balustrade", tag: "Glass Balustrade", image: "assets/service-images/residential/078-ultra-clear-laminated-glass-balustrade.jpg" },
     { title: "Linear Under-Tread Warm White LED Strip", tag: "Step Lights", image: "assets/service-images/residential/079-linear-under-tread-warm-white-led-strip.jpg" },
     { title: "Sculptural Brass Pendant Cluster Installation", tag: "Pendant Cluster", image: "assets/service-images/residential/080-sculptural-brass-pendant-cluster-installation.jpg" }
-  ],
-  "Outdoor patio, pergola, balcony & landscape design": [
-    { title: "Motorized Louvered Aluminium Pergola Setup", tag: "Louvered Pergola", image: "assets/service-images/residential/081-motorized-louvered-aluminium-pergola-setup.webp" },
-    { title: "All-Weather Synthetic Rattan Balcony Lounge", tag: "Outdoor Lounge", image: "assets/service-images/residential/082-all-weather-synthetic-rattan-balcony-lounge.jpg" },
-    { title: "Vertical Living Green Wall & Automated Drip", tag: "Living Wall", image: "assets/service-images/residential/083-vertical-living-green-wall-automated-drip.jpg" },
-    { title: "Warm Architectural Landscape Bollards & Lights", tag: "Garden Lighting", image: "assets/service-images/residential/084-warm-architectural-landscape-bollards-lights.jpg" }
   ],
 
   // 06 / Flat & Apartment Renovation Services
@@ -220,12 +217,15 @@ const residentialSubReferences = {
     { title: "PU / Duco Enamel Paint on Doors & Trims", tag: "Duco Coating", image: "assets/service-images/residential/099-pu-duco-enamel-paint-on-doors-trims.jpg" },
     { title: "Anti-Damp Moisture Barrier Primer Coating", tag: "Moisture Primer", image: "assets/service-images/residential/100-anti-damp-moisture-barrier-primer-coating.webp" }
   ],
-  "Fabrication Work": [
-    { title: "Slim Black MS Steel & Fluted Glass Partitions", tag: "Fluted Partitions", image: "assets/service-images/residential/101-slim-black-ms-steel-fluted-glass-partitions.jpg" },
-    { title: "Laser-Cut Balcony Safety Grills & Railings", tag: "Safety Grills", image: "assets/service-images/residential/102-laser-cut-balcony-safety-grills-railings.jpg" },
-    { title: "Heavy-Duty Safety Door with Digital Smart Lock", tag: "Smart Safety Door", image: "assets/service-images/residential/103-heavy-duty-safety-door-with-digital-smart-lock.jpg" },
-    { title: "Custom Structural Steel Loft & Storage Frame", tag: "Steel Lofts", image: "assets/service-images/residential/104-custom-structural-steel-loft-storage-frame.jpg" }
-  ]
+  "Fabrication Work": {
+    cover: "assets/service-images/residential/101-cover-ms-steel-fabrication.jpg",
+    refs: [
+      { title: "Slim Black MS Steel & Fluted Glass Partitions", tag: "Fluted Partitions", image: "assets/service-images/residential/101-slim-black-ms-steel-fluted-glass-partitions.jpg" },
+      { title: "Laser-Cut Balcony Safety Grills & Railings", tag: "Safety Grills", image: "assets/service-images/residential/102-laser-cut-balcony-safety-grills-railings.jpg" },
+      { title: "Heavy-Duty Safety Door with Digital Smart Lock", tag: "Smart Safety Door", image: "assets/service-images/residential/103-heavy-duty-safety-door-with-digital-smart-lock.jpg" },
+      { title: "Custom Structural Steel Loft & Storage Frame", tag: "Steel Lofts", image: "assets/service-images/residential/104-custom-structural-steel-loft-storage-frame.jpg" }
+    ]
+  }
 };
 
 const commercialSubImages = {
@@ -236,7 +236,6 @@ const commercialSubImages = {
   "Office washroom, pantry & civil refurbishment": "assets/service-images/commercial/C05-office-washroom-pantry-civil-refurbishment.jpg",
   "Turnkey warm shell to furnished office fit-out": "assets/service-images/commercial/C06-turnkey-warm-shell-to-furnished-office-fit-out.jpg",
   "Complete civil, flooring & sub-floor leveling": "assets/service-images/commercial/C07-complete-civil-flooring-sub-floor-leveling.jpg",
-  "End-to-end MEP, HVAC & electrical fit-out": "assets/service-images/commercial/C08-end-to-end-mep-hvac-electrical-fit-out.jpg",
   "Custom cabins, workstations & interior carpentry": "assets/service-images/commercial/C09-custom-cabins-workstations-interior-carpentry.jpg",
   "Fire safety, IT server room & security integration": "assets/service-images/commercial/C10-fire-safety-it-server-room-security-integration.jpg",
   "Linear & cluster employee workstation desks": "assets/service-images/commercial/C11-linear-cluster-employee-workstation-desks.jpg",
@@ -354,8 +353,7 @@ const experienceData = {
           "Double-height living room & grand entrance foyer design",
           "Custom marble, Italian stone & wooden flooring work",
           "Private home theater, bar lounge & gym room setup",
-          "Designer staircase, glass railings & chandelier installation",
-          "Outdoor patio, pergola, balcony & landscape design"
+          "Designer staircase, glass railings & chandelier installation"
         ]
       },
       {
@@ -427,11 +425,11 @@ const experienceData = {
     closingTitle: "Make room<br />for <i>what’s next.</i>",
     catalogCopy: "Durable systems, clear wayfinding and a material language that keeps the brand in focus — built for everyday performance.",
     catalog: [
-      ["Acoustic calm", "PET / timber / fabric", image("photo-1497366216548-37526070297c")],
-      ["Workplace light", "Task / ambient / feature", image("photo-1497366811353-6870744d04b2")],
-      ["Glass + steel", "Slim / precise / durable", image("photo-1542744173-8e7e53415bb0")],
-      ["Built to move", "Demountable / adaptable", image("photo-1556761175-b413da4baf72")],
-      ["Technical detail", "MEP / HVAC / data", image("photo-1497366754035-f200968a6e72")]
+      ["Acoustic calm", "PET / timber / fabric", "assets/service-images/commercial/catalog-acoustic-calm.png"],
+      ["Workplace light", "Task / ambient / feature", "assets/service-images/commercial/catalog-workplace-light.jpg"],
+      ["Glass + steel", "Slim / precise / durable", "assets/service-images/commercial/catalog-glass-steel.jpg"],
+      ["Built to move", "Demountable / adaptable", "assets/service-images/commercial/catalog-built-to-move.jpg"],
+      ["Technical detail", "MEP / HVAC / data", "assets/service-images/commercial/catalog-technical-detail.jpg"]
     ],
     services: [
       {
@@ -442,11 +440,11 @@ const experienceData = {
       {
         title: "Bare Shell to Full Office Fit-Out",
         image: "assets/service-images/commercial/C08-end-to-end-mep-hvac-electrical-fit-out.jpg",
-        items: ["Turnkey warm shell to furnished office fit-out", "Complete civil, flooring & sub-floor leveling", "End-to-end MEP, HVAC & electrical fit-out", "Custom cabins, workstations & interior carpentry", "Fire safety, IT server room & security integration"]
+        items: ["Turnkey warm shell to furnished office fit-out", "Complete civil, flooring & sub-floor leveling", "Custom cabins, workstations & interior carpentry", "Fire safety, IT server room & security integration"]
       },
       {
         title: "Modular Office Furniture & Workstation Setup",
-        image: "assets/service-images/commercial/C15-custom-reception-desk-pedestals-storage-cabinets.jpg",
+        image: "assets/service-images/commercial/C15-card-modular-office-furniture.jpg",
         items: ["Linear & cluster employee workstation desks", "Executive MD desk & manager cabin furniture", "Conference table & boardroom seating setup", "Ergonomic office chairs & lounge sofas", "Custom reception desk, pedestals & storage cabinets"]
       },
       {
@@ -456,7 +454,7 @@ const experienceData = {
       },
       {
         title: "Commercial False Ceiling & Lighting Contractors",
-        image: "assets/service-images/commercial/C25-exposed-industrial-ceiling-painting-hanging-lights.png",
+        image: "assets/service-images/commercial/C25-card-commercial-false-ceiling.jpg",
         items: ["Gypsum board & POP seamless false ceiling", "Armstrong grid & mineral fiber tile ceiling", "Open cell, baffle & metal strip ceilings", "Architectural LED profile, track & panel lighting", "Exposed industrial ceiling painting & hanging lights"]
       },
       {
@@ -925,9 +923,16 @@ function updateComparison(value) {
   if (range && Number(range.value) !== Number(value)) range.value = String(value);
 }
 
+function getSubReferenceGroup(itemTitle) {
+  const entry = residentialSubReferences[itemTitle];
+  if (!entry) return null;
+  return Array.isArray(entry) ? { cover: null, refs: entry } : entry;
+}
+
 function showSubItemReferences(itemTitle, itemIndex) {
-  const refs = residentialSubReferences[itemTitle];
-  if (!refs) return;
+  const group = getSubReferenceGroup(itemTitle);
+  const refs = group && group.refs;
+  if (!refs || !refs.length) return;
 
   const drawer = $("#detailReferencesDrawer");
   const titleEl = $("#referencesDrawerTitle");
@@ -1007,9 +1012,10 @@ function showServiceDetail(data, serviceIndex) {
   const activePool = data.name === "Residential" ? detailImagePool.slice(0, 12) : detailImagePool;
   grid.innerHTML = service.items.map((item, itemIndex) => {
     const imageIndex = (serviceIndex * 5 + itemIndex) % activePool.length;
-    const hasRefs = data.name === "Residential" && residentialSubReferences[item];
+    const subGroup = data.name === "Residential" ? getSubReferenceGroup(item) : null;
+    const hasRefs = Boolean(subGroup && subGroup.refs && subGroup.refs.length);
     const itemImage = data.name === "Residential"
-      ? (residentialSubReferences[item] && residentialSubReferences[item][0] ? residentialSubReferences[item][0].image : activePool[imageIndex])
+      ? (hasRefs ? (subGroup.cover || (subGroup.refs[0] && subGroup.refs[0].image) || activePool[imageIndex]) : activePool[imageIndex])
       : (commercialSubImages[item] || activePool[imageIndex]);
     return `
       <article class="detail-item${hasRefs ? " has-references" : ""}" data-item-index="${itemIndex}" data-item-title="${item}">
