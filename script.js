@@ -60,30 +60,42 @@ const reviewHighlights = [
 
 const residentialSubReferences = {
   // 01 / Complete Home Interior Design
-  "1BHK Complete Home Interiors": [
-    { title: "Compact Living & Floating TV Unit", tag: "Living Zone", image: "assets/service-images/residential/001-compact-living-floating-tv-unit.jpg" },
-    { title: "Master Suite Integrated Storage", tag: "Master Bedroom", image: "assets/service-images/residential/002-master-suite-integrated-storage.png" },
-    { title: "Modular Parallel Kitchen Layout", tag: "Parallel Kitchen", image: "assets/service-images/residential/003-modular-parallel-kitchen-layout.webp" },
-    { title: "Minimalist Bathroom & Floating Vanity", tag: "Smart Bathroom", image: "assets/service-images/residential/004-minimalist-bathroom-floating-vanity.jpg" }
-  ],
-  "2BHK Complete Home Interiors": [
-    { title: "Open Concept Living & Dining Lounge", tag: "Living & Dining", image: "assets/service-images/residential/005-open-concept-living-dining-lounge.jpg" },
-    { title: "Master Suite with Wooden Paneling", tag: "Master Bedroom", image: "assets/service-images/residential/006-master-suite-with-wooden-paneling.jpg" },
-    { title: "Kids / Study Room with Murphy Desk", tag: "Kids Room", image: "assets/service-images/residential/007-kids-study-room-with-murphy-desk.jpg" },
-    { title: "L-Shaped Quartz Countertop Kitchen", tag: "Modular Kitchen", image: "assets/service-images/residential/008-l-shaped-quartz-countertop-kitchen.jpg" }
-  ],
-  "3BHK Complete Home Interiors": [
-    { title: "Expansive Formal Living & Foyer Gallery", tag: "Grand Foyer", image: "assets/service-images/residential/009-expansive-formal-living-foyer-gallery.jpg" },
-    { title: "Master Bedroom with Walk-in Dressing", tag: "Master Suite", image: "assets/service-images/residential/010-master-bedroom-with-walk-in-dressing.jpg" },
-    { title: "Parents / Guest Bedroom Classic Paneling", tag: "Guest Suite", image: "assets/service-images/residential/011-parents-guest-bedroom-classic-paneling.jpg" },
-    { title: "Island Kitchen & Breakfast Counter", tag: "Island Kitchen", image: "assets/service-images/residential/012-island-kitchen-breakfast-counter.jpg" }
-  ],
-  "4BHK Complete Home Interiors": [
-    { title: "Grand Double Living Marble Cladding", tag: "Double Living", image: "assets/service-images/residential/013-grand-double-living-marble-cladding.jpg" },
-    { title: "Presidential Master Suite & Balcony", tag: "Master Suite", image: "assets/service-images/residential/014-presidential-master-suite-balcony.jpg" },
-    { title: "Entertainment Lounge & Bar Unit", tag: "Home Lounge", image: "assets/service-images/residential/015-entertainment-lounge-bar-unit.jpg" },
-    { title: "Gourmet Chef's Kitchen with Tall Pantry", tag: "Chef Kitchen", image: "assets/service-images/residential/016-gourmet-chefs-kitchen-with-tall-pantry.jpg" }
-  ],
+  "1BHK Complete Home Interiors": {
+    cover: "assets/service-images/residential/001-compact-living-floating-tv-unit.jpg",
+    refs: [
+      { title: "Compact Living & Floating TV Unit", tag: "Living Zone", image: "assets/service-images/residential/001a-1bhk-complete-home-interiors.jpg" },
+      { title: "Master Suite Integrated Storage", tag: "Master Bedroom", image: "assets/service-images/residential/002-master-suite-integrated-storage.png" },
+      { title: "Modular Parallel Kitchen Layout", tag: "Parallel Kitchen", image: "assets/service-images/residential/003-modular-parallel-kitchen-layout.webp" },
+      { title: "Minimalist Bathroom & Floating Vanity", tag: "Smart Bathroom", image: "assets/service-images/residential/004-minimalist-bathroom-floating-vanity.jpg" }
+    ]
+  },
+  "2BHK Complete Home Interiors": {
+    cover: "assets/service-images/residential/005-open-concept-living-dining-lounge.jpg",
+    refs: [
+      { title: "Open Concept Living & Dining Lounge", tag: "Living & Dining", image: "assets/service-images/residential/005a-2bhk-complete-home-interiors.jpg" },
+      { title: "Master Suite with Wooden Paneling", tag: "Master Bedroom", image: "assets/service-images/residential/006-master-suite-with-wooden-paneling.jpg" },
+      { title: "Kids / Study Room with Murphy Desk", tag: "Kids Room", image: "assets/service-images/residential/007-kids-study-room-with-murphy-desk.jpg" },
+      { title: "L-Shaped Quartz Countertop Kitchen", tag: "Modular Kitchen", image: "assets/service-images/residential/008-l-shaped-quartz-countertop-kitchen.jpg" }
+    ]
+  },
+  "3BHK Complete Home Interiors": {
+    cover: "assets/service-images/residential/009-expansive-formal-living-foyer-gallery.jpg",
+    refs: [
+      { title: "Expansive Formal Living & Foyer Gallery", tag: "Grand Foyer", image: "assets/service-images/residential/009a-3bhk-complete-home-interiors.jpg" },
+      { title: "Master Bedroom with Walk-in Dressing", tag: "Master Suite", image: "assets/service-images/residential/010-master-bedroom-with-walk-in-dressing.jpg" },
+      { title: "Parents / Guest Bedroom Classic Paneling", tag: "Guest Suite", image: "assets/service-images/residential/011-parents-guest-bedroom-classic-paneling.jpg" },
+      { title: "Island Kitchen & Breakfast Counter", tag: "Island Kitchen", image: "assets/service-images/residential/012-island-kitchen-breakfast-counter.jpg" }
+    ]
+  },
+  "4BHK Complete Home Interiors": {
+    cover: "assets/service-images/residential/013-cover-4bhk-complete-home.jpg",
+    refs: [
+      { title: "Grand Double Living Marble Cladding", tag: "Double Living", image: "assets/service-images/residential/013a-4bhk-complete-home-interiors.jpg" },
+      { title: "Presidential Master Suite & Balcony", tag: "Master Suite", image: "assets/service-images/residential/014-presidential-master-suite-balcony.jpg" },
+      { title: "Entertainment Lounge & Bar Unit", tag: "Home Lounge", image: "assets/service-images/residential/015-entertainment-lounge-bar-unit.jpg" },
+      { title: "Gourmet Chef's Kitchen with Tall Pantry", tag: "Chef Kitchen", image: "assets/service-images/residential/016-gourmet-chefs-kitchen-with-tall-pantry.jpg" }
+    ]
+  },
 
   // 02 / Types of Bathroom Interior
   "Modern Minimalist Bathroom": [
@@ -167,7 +179,7 @@ const residentialSubReferences = {
   "Double-height living room & grand entrance foyer design": {
     cover: "assets/service-images/residential/065-cover-double-height-living-room.png",
     refs: [
-      { title: "20-Foot Feature Wall with Bookmatched Marble", tag: "Feature Wall", image: "assets/service-images/residential/065a-bookmatched-marble-feature-wall.jpg" },
+      { title: "20-Foot Feature Wall with Bookmatched Marble", tag: "Feature Wall", image: "assets/service-images/residential/065a-double-height-living-room.png" },
       { title: "Cascading Crystal Chandelier Installation", tag: "Chandelier", image: "assets/service-images/residential/066-cascading-crystal-chandelier-installation.png" },
       { title: "Architectural Curved Staircase & Glass Railing", tag: "Curved Staircase", image: "assets/service-images/residential/067-architectural-curved-staircase-glass-railing.jpg" },
       { title: "Solid Teak Double Pivot Grand Entrance Door", tag: "Pivot Door", image: "assets/service-images/residential/068-solid-teak-double-pivot-grand-entrance-door.jpg" }
@@ -193,12 +205,15 @@ const residentialSubReferences = {
   ],
 
   // 06 / Flat & Apartment Renovation Services
-  "False Ceiling & POP Work": [
-    { title: "Minimalist Perimeter Cove Diffused LED", tag: "Cove Ceiling", image: "assets/service-images/residential/085-minimalist-perimeter-cove-diffused-led.jpg" },
-    { title: "Magnetic Slim Track Lighting Channels", tag: "Magnetic Track", image: "assets/service-images/residential/086-magnetic-slim-track-lighting-channels.jpg" },
-    { title: "Modern POP Wall Mouldings & Geometric Trim", tag: "Wall Mouldings", image: "assets/service-images/residential/087-modern-pop-wall-mouldings-geometric-trim.jpg" },
-    { title: "Acoustic Drop Gypsum Board Ceiling Details", tag: "Acoustic Ceiling", image: "assets/service-images/residential/088-acoustic-drop-gypsum-board-ceiling-details.jpg" }
-  ],
+  "False Ceiling & POP Work": {
+    cover: "assets/service-images/residential/085-cover-false-ceiling-pop-work.jpg",
+    refs: [
+      { title: "Minimalist Perimeter Cove Diffused LED", tag: "Cove Ceiling", image: "assets/service-images/residential/085-minimalist-perimeter-cove-diffused-led.jpg" },
+      { title: "Magnetic Slim Track Lighting Channels", tag: "Magnetic Track", image: "assets/service-images/residential/086-magnetic-slim-track-lighting-channels.jpg" },
+      { title: "Modern POP Wall Mouldings & Geometric Trim", tag: "Wall Mouldings", image: "assets/service-images/residential/087-modern-pop-wall-mouldings-geometric-trim.jpg" },
+      { title: "Acoustic Drop Gypsum Board Ceiling Details", tag: "Acoustic Ceiling", image: "assets/service-images/residential/088-acoustic-drop-gypsum-board-ceiling-details.jpg" }
+    ]
+  },
   "Civil & Masonry Work": [
     { title: "Internal Non-Loadbearing Wall Breaking", tag: "Space Opening", image: "assets/service-images/residential/089-internal-non-loadbearing-wall-breaking.jpg" },
     { title: "Siporex Lightweight Block Partition Walls", tag: "Block Masonry", image: "assets/service-images/residential/090-siporex-lightweight-block-partition-walls.webp" },
